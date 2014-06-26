@@ -3,7 +3,7 @@ calculator-book
 
 This is a guide to implementing your own 2050 calculator.
 
-It is written as a series of markdown files. These are then turned into a pdf, website and an e-book by using the programs in the outputs folder.
+It is written as a series of markdown files. These are then turned into a pdf, website and an e-book by using the programs in the public folder.
 
 # Writing markdown
 
