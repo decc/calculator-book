@@ -6,7 +6,7 @@ This appendix provides an overview of the Excel calculator structure, followed b
 
 ## Overall structure
 
-**Figure** **0:** **Over-arching structure** **of the **calculator** **Excel** **model**
+![Over-arching structure of the calculator Excel model](./figures/overview-of-excel-structure.png)
 
 Figure 0 above provides a summary of the way in which the Excel model is structured and how the user’s choices flow through the chain of calculations. The user interacts with the ‘control’ worksheet, where they make level selections (from 1 to4) for all of the mitigation options. Broadly, these level selections feed through to separate sector sheets where the implications of the user’s choice (in terms of energy supply/demand and any associated emission)are calculated. The results for each sector are then pulled together to produce a full-system overview. This is done in two stages, firstly by each of the five year intervals in the ‘year sheets’. Finally,all of the sectors for all of the time intervals are drawn together in the ‘intermediate output’ worksheet. The four main sections as shown above are described, in turn, below.
 
