@@ -1,7 +1,7 @@
-calculator-book
+The 2050 Calculator Book
 ===============
 
-This is a guide to implementing your own 2050 calculator.
+This is a guide to implementing your own 2050 calculator. You can read it at http://book.2050.org.uk.
 
 It is written as a series of markdown files. These are then turned into a pdf, website and an e-book by using the programs in the public folder.
 
