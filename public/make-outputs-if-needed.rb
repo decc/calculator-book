@@ -6,3 +6,4 @@ puts `git pull`
 puts `ruby #{File.dirname(__FILE__)}/make-pdf.rb`
 puts `ruby #{File.dirname(__FILE__)}/make-epub.rb`
 puts `ruby #{File.dirname(__FILE__)}/make-website.rb`
+puts `ruby #{File.dirname(__FILE__)}/make-word.rb`
