@@ -1,5 +1,7 @@
 # Todo
+
 - Sector-by-sector breakdown, covering important/difficult aspects of each. Include something about energy balancing. 
+
 ## Adding in costs:
 ### Where to get data
 ### How to work costs into spreadsheet

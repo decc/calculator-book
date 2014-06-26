@@ -18,6 +18,7 @@ keeping-the-calculator-alive.md
 excel-model-structure.md
 complex-excel-formulae.md
 vectors.md
+units.md
 balancing.md
 calculating-emissions.md
 stress-test.md
