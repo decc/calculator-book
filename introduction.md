@@ -1,6 +1,10 @@
 # Introduction 
 
-Climate change is one of the biggest challenges governments and communities face in the 21st Century. The way in which we produce and consume energy has been one of the major causes, but it is of course a huge part of the solution. Even for those who remain unconvinced of the threat, energy security issues, fuel price changes and pressure on natural resources mean that the status quo looks less and less sustainable in the long term. 
+Energy is essential to civilisation. In many countries the way we get and the use energy has to change: either because more energy is needed to develop; or the current approach to energy is insecure, expensive, unpopular or polluting.
+
+Much of the infrastructure that uses, supplies and transmits the energy we use has a very long life, therefore we need to think long-term when we decide what to do about it.
+
+Many sources of energy are unpopular: they are expensive, they cause pollution, they are considered unsafe, they are unsightly, they are a hastle to use. Many ways that energy might be used or conserved are also unpopular for similar reasons. Trade-offs between these different consequences have to be made.
 
 The 2050 Calculator approach to energy and emissions modelling is about understanding how a group of people – whether at the regional, country or even global level – use energy, and then identifying the real changes that could be made to supply and demand. Discussions with experts help to prioritise a small number of simple choices (or levers) which are then translated into an interactive tool to allow people to explore all the different options. The impact of people’s choices on emissions, land use, air quality and energy security can be displayed instantly. A calculator gives people a platform to have more informed conversations, and those in power the information to make better decisions. 
 
