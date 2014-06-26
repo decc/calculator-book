@@ -1,5 +1,5 @@
 # The following files are assembled together to make the book
-# in the order they are given here
+# in the order they are given here. 
 
 front.md
 introduction.md
@@ -13,7 +13,7 @@ influencing-policy.md
 engagement-and-education.md
 keeping-the-calculator-alive.md
 
-# These are appendices
+# These are appendices (note that their numbering has to be changed manually)
 
 excel-model-structure.md
 complex-excel-formulae.md
