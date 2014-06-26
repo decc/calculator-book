@@ -1,0 +1,27 @@
+# The following files are assembled together to make the book
+# in the order they are given here
+
+front.md
+introduction.md
+
+getting-started.md
+mapping-your-emissions.md
+building-the-spreadsheet.md
+building-the-webtool.md
+launching-your-calculator.md
+influencing-policy.md
+engagement-and-education.md
+keeping-the-calculator-alive.md
+
+# These are appendices
+
+excel-model-structure.md
+complex-excel-formulae.md
+vectors.md
+balancing.md
+calculating-emissions.md
+stress-test.md
+bioenergy.md
+
+# This isn't written yet
+todo.md
