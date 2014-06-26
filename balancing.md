@@ -1,4 +1,5 @@
 # Appendix 5: Balancing mechanism
+
 NOTE FROM ED: We need some detail here about our assumption on the grid e.g. national, 7% losses, new projects can be easily connected. This might not apply to other countrils. Tom B did some work on this and I’ve done a note on this.
 
 The UK calculator has a built-in balancing mechanism for the electricity sector, which ensures that supply is always sufficient to match demand.
