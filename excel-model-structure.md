@@ -12,10 +12,13 @@ Figure 0 above provides a summary of the way in which the Excel model is structu
 
 ## The control sheet
 
+![The Excel control sheet](./figures/excel-control-sheet.png)
+
 The control sheet is the main user interface. From this single worksheet the user can develop their pathway and see the implications in charts showing energy demand, energy supply and emissions.
+
 The different greenhouse gas (GHG) mitigation actions, or ‘levers’, are listed in columns A to D (see the area labelled ‘A’ in figure 1). The levers are organised by category, with each having its own Roman numeric code (e.g. III.a.2 for onshore wind).
 
-The user assigns their choice of level against each lever by entering a number from 1 to 4into column E. The supply side levers allow integer choices (e.g. level 1.7).IT IS POSSIBLE TO HAVE INTEGERS IN DEMAND E.G. GC. SHOULD WE MENTION? The cells into which the numbers are entered are ‘named cells’, e.g. cell E9, in which the chosen level for onshore wind must be entered is named ‘III.a.2.Scenario’. This allows this cell to be referenced from elsewhere, using this label, e.g. ‘=III.a.2.Scenario’, rather than ‘=Control!E9’.
+The user assigns their choice of level against each lever by entering a number from 1 to 4 into column E. The supply side levers allow integer choices (e.g. level 1.7).<!-- IT IS POSSIBLE TO HAVE INTEGERS IN DEMAND E.G. GC. SHOULD WE MENTION? --> The cells into which the numbers are entered are ‘named cells’, e.g. cell E9, in which the chosen level for onshore wind must be entered is named ‘III.a.2.Scenario’. This allows this cell to be referenced from elsewhere, using this label, e.g. ‘=III.a.2.Scenario’, rather than ‘=Control!E9’.
 
 Columns H to K provide descriptions of each level to assist users in their choice (see area C in figure 1below). For example, with the 111.a.2 lever, the user is choosing the capacity of onshore wind to be installed by 2050, from 0 turbines (level 1), to 40,000 turbines (level 4).
 
@@ -23,9 +26,8 @@ The implications of the user’s choices, in terms of primary supply, demand, el
 
 Example pathways are shown in columns M to Y (see area D in figure 1below). To enter these, the user must copy the values from the desired column into column E.
 
-**Figure 1: The** **control** **sheet**
 
-Video?
+<!-- Video? -->
 
 ## Sectors
 
@@ -37,35 +39,38 @@ The sector sheets are split up into a number of different sections. The same sec
 
 ### Choice of trajectory
 
+![Choice of trajectory](./figures/choice-of-trajectory.png)
+
 For example, when the user enters a level (here 1.3) into cell E9 of the control sheet (named III.a.2.Scenario), it feeds through to cell E7 of the ‘choice of trajectory’ section of the III.a.2 worksheet, as can be seen from the formula in the screenshot below (figure 2).
 
-**Figure** **2: Choice of trajectory
 
 ### Trajectory assumptions
 
-Each sector sheet also has a ‘trajectory assumptions’ section, where the level selection number (1-4) is converted into what the lever actually specifies. For the onshore wind example, this is the GW of capacity installed. It is important to note that the capacity values in the table are multiplied by a named cell (here ‘unit.GW’), which corresponds to the units which the values represent. SeeAppendix 4 for a full explanation of how units are treated in the model.
+![Trajectory assumptions](figures/trajectory-assumptions.png)
 
-**Figure 3: Trajectory** **assumptions**
+Each sector sheet also has a ‘trajectory assumptions’ section, where the level selection number (1-4) is converted into what the lever actually specifies. For the onshore wind example, this is the GW of capacity installed. It is important to note that the capacity values in the table are multiplied by a named cell (here ‘unit.GW’), which corresponds to the units which the values represent. See the [appendix on units](#appendix-4-units) for a full explanation.
+
 
 ### Fixed assumptions
 
+![Fixed assumptions](figures/fixed-assumptions.png)
+
 The ‘fixed assumptions’ section is where all required assumptions are stated that are outside of the user’s choice. 
 
-**Figure** **4: Fixed assumptions
+Legacy capacity
+: the existing installed capacity of onshore wind turbines already existing at the start of the modelling period. 
 
-As can be seen from figure 4, the onshore wind fixed assumptions section contains details about the:
+Capacity factor
+: the average proportion of time that the turbines operate at their quoted capacity, incorporating both down-time for maintenance and fluctuations in wind speed over the year.
 
-**Legacy capacity** – the existing installed capacity of onshore wind turbines already existing at the start of the modelling period. 
-
-**Capacity factor** – the average proportion of time that the turbines operate at their quoted capacity, incorporating both down-time for maintenance and fluctuations in wind speed over the year.
-
-**Implications** – details about the assumed size of wind turbine and the amount of land area required for each unit of energy produced.
+Implications
+: details about the assumed size of wind turbine and the amount of land area required for each unit of energy produced.
 
 ### Derived assumptions
 
 The trajectory assumptions and fixed assumptions mentioned above are combined to produce the values contained within the next section of the sector sheet, the ‘derived assumptions’.
 
-**Figure 5: Derived assumptions**
+![Derived assumptions](figures/derived-assumptions.png)
 
 In our example case of onshore wind, the derived assumptions section is very brief, showing only the resulting capacity of installed wind in each of the modelled periods out to 2050. This is calculated by starting with the existing legacy capacity stated in the fixed assumptions and then applying the quantityof newly built capacity from the trajectory assumptions section, as determined by the user’s chosen level of effort (1-4), as displayed in the choice of trajectory section. The corresponding retirement rate from thetrajectory assumptions section is also applied, to account for the assumption that wind turbines have a finite lifetime.
 
@@ -85,16 +90,16 @@ Some of the more complex sectors have many rows of calculations in this section,
 1. The capacity factor, as stated in the fixed assumptions section is restated, again allowing the user to view this without the need to look further up the worksheet
 1. The ‘available supply ‘ is calculated by multiplying the two values above (the installed capacity and the capacity factor)
 1. The electricity generation resulting from the ‘available supply’ is then calculated. This a typical power to energy conversion where:
-1.1. The ‘actual supply’ is multiplied by the Preferences.Unit.Power named cell, to account of the unit of power in which the value is quoted
-1.1. The result from step ‘a’ is then multiplied by the number of seconds in a year, by utilising the ‘unit.year’ named cell. This yields the number of joules produced by the capacity each year.
-1.1. The result of step ‘b’ is then divided by the named cell ‘Preferences.Unit.Energy’, which converts the result into the energy units that the user has chosen. (The ‘Preferences.Unit.Energy’ named cell effectively holds the number of joules contained within one unit of the user’s preferred unit of energy.)
-1.1. This provides an estimate, in TWh (or whatever the chosen preference unit of energy is), of the electricity generated within the sector, that results from the user’s choice of capacity
+   1. The ‘actual supply’ is multiplied by the Preferences.Unit.Power named cell, to account of the unit of power in which the value is quoted
+   1. The result from step ‘a’ is then multiplied by the number of seconds in a year, by utilising the ‘unit.year’ named cell. This yields the number of joules produced by the capacity each year.
+   1. The result of step ‘b’ is then divided by the named cell ‘Preferences.Unit.Energy’, which converts the result into the energy units that the user has chosen. (The ‘Preferences.Unit.Energy’ named cell effectively holds the number of joules contained within one unit of the user’s preferred unit of energy.)
+   1. This provides an estimate, in TWh (or whatever the chosen preference unit of energy is), of the electricity generated within the sector, that results from the user’s choice of capacity
 
 ### Outputs
 
 At the bottom of the sector sheet the key results are gathered into a single location, the ‘Outputs’ table, so that they can be easily located.
 
-**Figure 6: Example of an outputs table**
+![Example of an outputs table](./figures/example-of-an-output-table.png)
 
 There are several key features to note about this table
 
@@ -112,15 +117,16 @@ Below the ‘Outputs’ table are a couple of additional results tables that sho
 
 Each of the sector sheets, like that for onshore wind as described above, effectively exist in isolation. The primary function of the ‘year sheets’ is to bring all the key outputs from the sectors together, creating a full system overview.  There is a separate year sheet for each of the five year intervals modelled within the calculator; each of these shows how the energy system balances at that point in time.
 
-**Figure** **7: Example of a** **year** **sheet**
+![Example of a year sheet](./figures/example-of-a-year-sheet.png)
 
-As figure 7above suggests, the year sheets contain a large table, with all of the sectors represented in the rows, and all of the vectors represented across the columns. The table displaysthe values for all the relevant vectors for all of the sectors. These values link through from the outputs tables at the bottom of each sector sheet (using a somewhat complex formula, which is explainedin Appendix 2). This link between the sector outputs tables and the year sheets can be seen above: the 10.7TWh value for vector V.02 (electricity delivered to the grid) for onshore wind in 2010, as shown in figure 6, is also visible in figure 7, in the onshore wind row of the V.02 column. As can also be seenfigure 7, the electricity generated by all of the relevant sectors appears in the V.02 column of the year sheet. This allows the generation total, across all sectors, to be calculated for the particular year shown in the year sheet (here 2010). The same is done across all of the vectors, which in combination yield an energy balance for the whole system. This balance shows the input of energy via the ‘primary sources’ vectors, its conversion into usable fuel types via the‘secondary sources’vectors, through to the final consumption of energy in each demand category via the ‘uses’ vectors. The principle that energy cannot be created or destroyed is visible here, as together the vectors net to zero.
+As figure 7 above suggests, the year sheets contain a large table, with all of the sectors represented in the rows, and all of the vectors represented across the columns. The table displaysthe values for all the relevant vectors for all of the sectors. These values link through from the outputs tables at the bottom of each sector sheet (using a somewhat complex formula, which is explainedin Appendix 2). This link between the sector outputs tables and the year sheets can be seen above: the 10.7TWh value for vector V.02 (electricity delivered to the grid) for onshore wind in 2010, as shown in figure 6, is also visible in figure 7, in the onshore wind row of the V.02 column. As can also be seenfigure 7, the electricity generated by all of the relevant sectors appears in the V.02 column of the year sheet. This allows the generation total, across all sectors, to be calculated for the particular year shown in the year sheet (here 2010). The same is done across all of the vectors, which in combination yield an energy balance for the whole system. This balance shows the input of energy via the ‘primary sources’ vectors, its conversion into usable fuel types via the‘secondary sources’vectors, through to the final consumption of energy in each demand category via the ‘uses’ vectors. The principle that energy cannot be created or destroyed is visible here, as together the vectors net to zero.
 
 All of the year sheets operate in the same way, and are essentially identical, apart from the year which they represent. Indeed, simply changing the year displayed in the top left-hand corner of the worksheet (cell E2) will cause the formulae to update so that the entire year sheet will then show data for the newly entered year. Thisproperty can be very useful when constructing a new version of the calculator, as any changes made to one year sheet can be quickly replicated across all the year sheets simply by deleting all but the updated year sheet, then duplicating it the required number of times and then entering the required years (2010, 2015, … , 2050) in cell E2 of the corresponding sheets.
 
 The vast majority of the information shown in the year sheets links directly from the sector sheets as described above. There are however a couple of exceptions where additional calculations are performed, which are listed below:
 
 - For the electricity vectors (V.01 and V.02) in the row labelled ‘Subtotal.I.a’, a calculation required for the model’s balancing mechanism is made. This calculates the difference between the total amount of electricity demanded and the amount supplied by low carbon technologies, to reveal any shortfall that is met by generation using the model’s default technology (gas-fired power stations, in the case of the UK model).
+
 - The model contains a number of supplementary vectors, Y.02-Y.06, for handling any required balancing imports/exports for a selection of primary energy inputs (e.g. gas, coal etc). Within the year sheets the difference between demand for these inputs and their indigenous production is calculated, revealing any required import/export quantities. This can be seen in the row labelled ‘balancing imports’ (row 103) for this selection of vectors.
 
 To the right-hand side of the vector tables, the year sheets contain a table that aggregates the emissions data across the sectors in a similar fashion.
@@ -130,7 +136,7 @@ N.B.  in the UK model there are two additional year sheets, labelled ‘2007 (Ac
 
 The intermediate output worksheet represents the final point of the model’s calculations, where the key results are drawn together and presented in an organised tabular fashion. In a similar way to how the year sheets draw all the sectors together, the intermediate output worksheet brings together the contents of the year sheets to a single place.
 
-**Figure** **8: The intermediate output worksheet**
+![The intermediate output worksheet](./figures/intermediate-output-worksheets.png)
 
 As shown above in figure 8, the intermediate output sheet shows a time series across the columns of the mode’s five year intervals from the base year (here 2007) up to 2050. The data is presented at a vector total level, showing the aggregated total across all of the relevant sectors. The table shown infigure 8 has been populated by formulae that return values from the vector ‘Net balance’ (row 109) of the corresponding year sheet.
 The intermediate output worksheet contains several summary tables that present headline information drawn together from the year sheets. These include:
