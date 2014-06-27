@@ -23,6 +23,7 @@ balancing.md
 calculating-emissions.md
 stress-test.md
 bioenergy.md
+how-the-webtool-works.md
 
 # This isn't written yet
 todo.md
