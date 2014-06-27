@@ -1,0 +1,39 @@
+digraph flow {
+        size = "5";
+        margin = 0;
+        rankdir = LR;
+        ranksep = "0.2 equally";
+
+        node [shape = circle,
+              margin = 0.01,
+              fontsize = 9,
+              width = 0.4,
+              colorscheme = "greys4", color = "3"];
+        edge [arrowhead = open,
+              arrowsize = 0.6,
+              colorscheme = "greys4", color = "3"];
+
+       
+        Q_03 [label = "Q.03", style = "filled", fillcolor = "1"];
+        C_03 [label = "C.03"];
+        V_05 [label = "V.05"];
+        V_02 [label = "V.02"];
+        V_01 [label = "V.01"];
+        L_01 [label = "L.01", style = "filled", fillcolor = "1"];
+
+        node [height = 0.8];
+              
+        XV_b  [label = "XV.b\nIndigenous\nfossil fuel\nproduction", shape = box, margin = 0.1];
+        XVI_a [label = "XVI.a\nFossil fuel\ntransfers", shape = box, margin = 0.1];
+        I_a   [label = "I.a\nThermal\npower\ngeneraiton", shape = box, margin = 0.1];
+        VII_b [label = "VII.b\nElectricity\ngrid\ndistribution", shape = box, margin = 0.1];
+        X_a   [label = "X.a\nDomestic\nlighting,\nappliances\n& cooking", shape = box, margin = 0.1];
+        
+        
+        Q_03 ->  XV_b -> C_03;
+        C_03 -> XVI_a -> V_05;
+        V_05 ->   I_a -> V_02;
+        V_02 -> VII_b -> V_01;
+        V_01 ->   X_a -> L_01;
+        
+} 

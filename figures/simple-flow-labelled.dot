@@ -1,0 +1,30 @@
+digraph gasflow {
+        size = "5";
+        margin = 0;
+        rankdir = LR;
+        colorscheme = "greys4";
+        node [shape = circle,
+              margin = 0.01,
+              fontsize = 7,
+              width = 0.7,
+              colorscheme = "greys4", color = "3"];
+        edge [arrowhead = open,
+              arrowsize = 0.6,
+              fontsize = 7,
+              colorscheme = "greys4", color = "3"];
+
+       
+        Q_03 [label = "Q.03\nGas\nreserves", style = "filled", fillcolor = "1"];
+        C_03 [label = "C.03\nNatural\ngas"];
+        V_05 [label = "V.05\nGaseous\nhydrocarbon"];
+        V_02 [label = "V.02\nElectricity\n(to grid)"];
+        V_01 [label = "V.01\nElectricity\n(to end user)"];
+        L_01 [label = "L.01\nLighting &\nAppliances", style = "filled", fillcolor = "1"];
+        
+        Q_03 -> C_03 [label = "Extract\n "];
+        C_03 -> V_05 [label = "Distribute &\nrecategorise\n "];
+        V_05 -> V_02 [label = "Transform\n "];
+        V_02 -> V_01 [label = "Distribute\n "];
+        V_01 -> L_01 [label = "Use\n "];
+              
+} 

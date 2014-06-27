@@ -1,0 +1,119 @@
+graph fueltypes {
+        size = "6";
+        fontsize = 2;        
+        margin = 0;
+        rankdir = LR;
+        node [shape = circle;
+              margin = 0];
+
+        "0" -- {nom vec}
+        
+        nom -- {sup dem bal}
+
+        // Supply
+        sup -- {N R A W Y Q};
+        N -- "N.01" // Nuclear fission
+        R -- {"R.01" "R..." "R.07"} // Renewables
+        A -- "A.01" // Agriculture
+        W -- "W.01" // Waste
+        Y -- {"Y.01" "Y..." "Y.06"} // Exports (imports)
+        Q -- {"Q.01" "Q.02" "Q.03"} // Fossil reserves
+
+        // Vectors
+        vec -- {elec carb "V.06" "V.07" bio "V.11" "V.12" crop}
+        elec -- {"V.01" "V.02" } // Electricity
+        carb -- {"V.03" "V.04" "V.05"}
+        "V.03" -- "C.01" // Solid hydrocarbons
+        "V.04" -- "C.02" // Liquid hydrocarbons
+        "V.05" -- "C.03" // Gaseous hydrocarbons
+        "V.06" // Blast furnace gas
+        "V.07" // Heat transport
+        bio -- {"V.08" "V.09" "V.10" "V.15"} // Biomass and waste
+        "V.11"	// Domestic solar thermal
+        "V.12"	// H2
+        crop -- {"V.13" "V.14"} // Energy crops
+        
+        // Demand
+        dem -- {T I H L};
+        T -- {"T.01" "T..." "T.06"} // Transport
+        I -- "I.01" // Industry
+        H -- "H.01" // Heating and cooling
+        L -- "L.01" // Lighting and appliances
+
+        // Balancing
+        bal -- X;
+        X -- {"X.01" "X.02"}; // Losses
+
+       
+
+}
+
+// FULL LIST OF FUEL TYPES
+        /*
+X.01	// Conversion losses
+X.02	// Distribution losses and own use
+Z.01	// Unallocated
+T.01	// Road transport
+T.02	// Rail transport
+T.03	// Domestic aviation
+T.04	// National navigation
+T.05	// International aviation
+T.06	// International shipping
+I.01	// Industry
+H.01	// Heating and cooling
+L.01	// Lighting & appliances
+F.01	// Food consumption [UNUSED]
+N.01	// Nuclear fission
+R.01	// Solar
+R.02	// Wind
+R.03	// Tidal
+R.04	// Wave
+R.05	// Geothermal
+R.06	// Hydro
+R.07	// Environmental heat
+A.01	// Agriculture
+W.01	// Waste
+Y.01	// Biomass oversupply (imports)
+Y.02	// Electricity oversupply (imports)
+Y.03	// Petroleum products oversupply
+Y.04	// Coal oversupply (imports)
+Y.05	// Oil and petroleum products oversupply (imports)
+Y.06	// Gas oversupply (imports)
+Q.01	// Coal reserves
+Q.02	// Oil reserves
+Q.03	// Gas reserves
+C.01	// Coal and fossil waste
+C.02	// Oil and petroleum products
+C.03	// Natural gas
+V.01	// Electricity (delivered to end user)
+V.02	// Electricity (supplied to grid)
+V.03	// Solid hydrocarbons
+V.04	// Liquid hydrocarbons
+V.05	// Gaseous hydrocarbons
+V.06	// Blast furnace gas
+V.07	// Heat transport
+V.08	// Edible biomass
+V.09	// Dry biomass and waste
+V.10	// Wet biomass and waste
+V.15	// Gaseous waste
+V.11	// Domestic solar thermal
+V.12	// H2
+V.13	// Energy crops (second generation)
+V.14	// Energy crops (first generation)
+
+// Illegal fuel types -- not fuel types at all
+
+B.01	// UK Land area
+B.04	// UK Sea area
+B.05	// Land area overseas
+B.06	// Length of wave front
+B.02	// Installed Capacity 
+B.07	// Load factor
+B.03	// Number of units
+B.12	// Balancing capacity used
+B.08	// Shiftable electricity demand
+B.09	// Additional electricity at peak
+B.10	// Temperature related additional electricity demand
+B.11	// Interconnector capacity
+
+*/

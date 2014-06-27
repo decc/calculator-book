@@ -1,0 +1,74 @@
+strict digraph flow {
+        size = "5";
+        margin = 0;
+        rankdir = LR;
+        ranksep = "0.2 equally";
+        concentrate = true;
+        
+                      
+        node [shape = circle, margin = 0.01, fontsize = 9, width = 0.4,
+              colorscheme = "greys4", color = "3"]
+        ;
+
+        edge [arrowhead = open, arrowsize = 0.6,
+              fontsize = 7, fontname = "Helvetica",
+              colorscheme = "greys4", color = "2" ]
+        ;
+
+        Q_03 [label = "Q.03", style = "filled", fillcolor = "2", group = "main"];
+        C_03 [label = "C.03", style = "filled", fillcolor = "1", group = "main"];
+        V_05 [label = "V.05", style = "filled", fillcolor = "1", group = "main"];
+        V_02 [label = "V.02", style = "filled", fillcolor = "1", group = "main"];
+        V_01 [label = "V.01", style = "filled", fillcolor = "1", group = "main"];
+        L_01 [label = "L.01", style = "filled", fillcolor = "2", group = "main"];
+
+        I_01 [label = "I.01"];
+        X_01 [label = "X.01"];
+        X_02 [label = "X.02"];
+                
+        XV_b  [label = "XV.b",  shape = none, margin = 0.05, width = 0, height = 0, group = "main"];
+        XVI_a [label = "XVI.a", shape = none, margin = 0.05, width = 0, height = 0, group = "main"];
+        I_a   [label = "I.a",   shape = none, margin = 0.05, width = 0, height = 0, group = "main"];
+        VII_b [label = "VII.b", shape = none, margin = 0.05, width = 0, height = 0, group = "main"];
+        X_a   [label = "X.a",   shape = none, margin = 0.05, width = 0, height = 0, group = "main"];
+
+        subgraph {rank = sink;
+                L_01 X_01 X_02 I_01
+        }
+                                
+        // The main flow
+        edge [weight = 4];
+        subgraph cluster {
+                color = none;
+                Q_03  -> XV_b  [label = "100"]
+                XV_b  -> C_03  [label = "100"]
+                C_03  -> XVI_a [label = "100"]
+                XVI_a -> V_05  [label = "99"]
+                V_05  -> I_a   [label = "98"]
+                I_a   -> V_02  [label = "38"]
+                V_02  -> VII_b [label = "38"]
+                VII_b -> V_01  [label = "34"]
+                V_01  -> X_a   [label = "32"]
+                X_a   -> L_01  [label = "32"]
+        }
+
+        edge [weight = 1];
+        
+        // Indigenous fossil fuel production
+        V_05 -> XV_b  [label = "1"] // Other fuel requirements
+        V_01 -> XV_b  [label = "2"] 
+        XV_b -> I_01  [label = "3"]
+        
+        // Fossil fuel transfers
+        XVI_a -> X_02 [label = "1"]
+        
+        // Thermal power generation
+        I_a -> X_01 [label = "58"]
+        I_a -> X_02 [label = "2"] 
+
+        // Electricity grid distribution
+        VII_b -> X_02 [label = "4"] 
+
+        // Domestic lighting, appliances, and cooking
+        
+} 
