@@ -16,6 +16,10 @@ This book is aimed primarily at people thinking of building a calculator, but is
 
 ## What does this book contain?
 
+This book starts with a chapter on each step of the process we went through to build a calculator. It then has a series of appendices that describe some of the tricker aspects in more detail. 
+
+This book isn't finished. The latest version is available online at <http://book.2050.org.uk> as [a pdf](http://book.2050.org.uk/calculator-book.pdf), [a webpage](http://book.2050.org.uk/calculator-book/index.html), [an ebook](http://book.2050.org.uk/calculator-book.epub) and [word document](http://book.2050.org.uk/calculator-book.docx). The source material used to create the book is available under an [open source](http://www.nationalarchives.gov.uk/doc/open-government-licence) lience on [github](https://github.com/decc/calculator-book). If you have comments or questions, please contact us at <2050pathways@decc.gsi.gov.uk>.
+
 
 ## A brief history of the calculator 
 
