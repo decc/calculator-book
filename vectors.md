@@ -2,7 +2,7 @@
 
 The vector convention is essentially a means of categorising energy into different types. Vectors enable quantities of energy to be organised and passed through the various calculation stages of the model in a simple, logical fashion.
 
-The idea of vectors is perhaps best explained by way of an example. A commonly used vector within the model is vector V.02, which is used to represent quantities of electricity thatare generated for delivery to the grid. All of the supply sectors that model the electricity generation by various technologies (e.g. solar, wind, nuclear) all assign the quantity of electricity generated to this specific vector (V.02). This allows the generation total across all the technologies to be calculated easily, simply by summing all the quantities assigned to this specific sector together.
+The idea of vectors is perhaps best explained by way of an example. A commonly used vector within the model is vector V.02, which is used to represent quantities of electricity that are generated for delivery to the grid. All of the supply sectors that model the electricity generation by various technologies (e.g. solar, wind, nuclear) all assign the quantity of electricity generated to this specific vector (V.02). This allows the generation total across all the technologies to be calculated easily, simply by summing all the quantities assigned to this specific sector together.
 
 The calculator makes use of three separate independent vector categorisations:
 
