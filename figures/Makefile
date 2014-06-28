@@ -6,7 +6,7 @@ objects := $(patsubst %.dot, %.png, $(sources))
 all : $(objects)
 
 $(objects) : %.png: %.dot
-	dot -Tpng $< > $@
+	dot -Tpng -Gdpi=300 $< > $@
 
 
 

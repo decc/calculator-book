@@ -49,7 +49,7 @@ shows a simplified version of that part of the energy system which involves gas
 as a fuel for power generation. I shall describe the steps in this system one by
 one.
 
-![An example of an energy flow, showing the forms that energy takes as it passes through the energy system. See the text for an explanation. Those types of energy which are primary sources and final demands are shown lightly shaded.](figures/simple-flow.pdf)
+![An example of an energy flow, showing the forms that energy takes as it passes through the energy system. See the text for an explanation. Those types of energy which are primary sources and final demands are shown lightly shaded.](figures/simple-flow.png)
 
 Buried under the North Sea are reserves of methane, a source of chemical
 energy. For this gas to be of any use it first has to be got out from under the
@@ -108,7 +108,7 @@ allowable as energy kinds.
 
 The codes for the previous example are shown in the figure below.
 
-![The example flow from the first section with the fuel type codes added.](figures/simple-flow-labelled.pdf)
+![The example flow from the first section with the fuel type codes added.](figures/simple-flow-labelled.png)
 
 There is obviously some structure to these codes: they consist of a letter
 followed by a two-digit number. One might suspect that energies whose codes have
@@ -131,7 +131,7 @@ codified. A group of related activities, modelled on a single worksheet, is
 called *sector*. Sectors also have codes. The figure below shows the sectors
 that are used to implement the transformations in the example. 
 
-![The example flow, now showing the sectors in the Calculator, which do the actual modelling work of computing how much energy is used.](figures/simple-flow-with-sectors.pdf)
+![The example flow, now showing the sectors in the Calculator, which do the actual modelling work of computing how much energy is used.](figures/simple-flow-with-sectors.png)
 
 
 ### The energy balance principle
@@ -149,7 +149,7 @@ with the missing flows included. I've included example energy flows---these
 flows have physically reasonable relative sizes but are otherwise invented for
 the purpose of this example.
 
-![The example flow in full so that the energy balance principle is satisfied. Sectors are shown without boxes to save space. Figures on the arrows show example energy flows for illustration.](figures/full-flow.pdf)
+![The example flow in full so that the energy balance principle is satisfied. Sectors are shown without boxes to save space. Figures on the arrows show example energy flows for illustration.](figures/full-flow.png)
 
 Fuel type `X.01` captures conversion losses such as energy lost as waste heat in
 a power station. Fuel type `X.02` captures distribution losses and "own
