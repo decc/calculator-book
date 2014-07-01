@@ -3,10 +3,13 @@
 sources := $(wildcard *.dot)
 objects := $(patsubst %.dot, %.png, $(sources))
 
-all : $(objects)
+all : $(objects) 
 
 $(objects) : %.png: %.dot
 	dot -Tpng -Gdpi=300 $< > $@
+
+clean :
+	rm $(objects)
 
 
 
