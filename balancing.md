@@ -1,27 +1,73 @@
-# Appendix 5: Balancing mechanism
+# Appendix 5: What happens when supply exceeds demand?
 
-NOTE FROM ED: We need some detail here about our assumption on the grid e.g. national, 7% losses, new projects can be easily connected. This might not apply to other countrils. Tom B did some work on this and I’ve done a note on this.
+Through your choices, you specify the demand for energy and whether it is in the form of electricity, solid fuels, liquid fuels or gaseous fuels.
 
-The UK calculator has a built-in balancing mechanism for the electricity sector, which ensures that supply is always sufficient to match demand.
+You also specify the amount of low carbon generation that will be built, the amount of bioenergy that will be produced and imported and (in the UK Excel spreadsheet) the amount of domestic fossil fuels that will be extracted. 
 
-**Figure** **1: the calculator’s electricity demand/supply balancing mechanism**
+But what happens when the supply you choose, doesn't match the demand?
 
-The level of electricity demand is determined by the user’s demand-side level selections for behaviour and energy efficiency. There is an underlying assumption that, in the case of the UK, there will always be sufficient electricity to meet demand, which is reflected in the model by a mechanism that ensures that supply is always at least as high as demand. Users, with their supply-side lever choices, determine the amount of electricity supply that comes from low carbon technologies (wind, solar, nuclear etc.). This is shown above by the green rectangle infigure 1. Any remaining shortfall required to match demand is made up via generation using the ‘_default fuel_’, which, in the case of the UK model, is natural gas. This is represented by the red rectangle.
+The answer is slightly different depending on whether the imbalance is in:
 
-A corollary of this approach is that users cannot directly specify the amount of generation from unabated fossil fuels; rather it is a product of their demand-side choices and their choices around low-carbon generation.
+1. gas/oils/solid fuels, or 
+2. in electricity
 
-This balancing mechanism is applied within sector 1.a, ‘hydrocarbon fuel power generation’. Towards the top of this sector sheet there is a section labelled ‘inputs’, where a couple of required values are fed in from the year sheets. The first shows the total demand for electricity, while the second shows electricity supply from all the low-carbon generation technologies. These figures link from row 81 of the year sheets, labelled ‘Subtotal.I.a, total electricity supply (demand) to this point’.
+which are described in turn next.
 
-Any shortfall between demand and the quantity supplied, determines the quantity of electricity to be supplied by this sector (i.e. 1.a). The model has a preference order in which the different fossil fuel types are used:
+The calculator mostly worries about long term permanent imbalances between supply and demand. It is also possible that very short term imbalances could occur (for instance, during moments when the wind doesn't blow). These short term imbalances are dealt with through a 'stress test' which is described in [Appendix 7](#appendix-7-stress-test).
 
-1. Oil
-1. Solid hydrocarbons
-1. Gaseous hydrocarbons
+## For solid/liquid/gaseous fuels
 
-In reality the quantities of the first two fuels are limited, so any changes to the generation requirement of this sector predominantly result in fluctuations in the use of gas, i.e. the ‘_default fuel_’.
+If you demand gas, then it will be met:
+
+1. First, by any biogass
+2. Then, by any domestic natural gas
+3. Then by importing natural gas to balance 
+
+If you demand solid fuels, then it will be met:
+
+1. First, by any domestic biomass
+2. Then, by any imported biomass
+3. Then, by any domestic coal
+4. Then, by importing coal to balance.
+
+If you demand liquid fuels, then it will be met:
+
+1. First, by any domestic biofuels
+2. Then, by any imported biofuels
+3. Then, by any domestic oil
+4. Then, by importing oil to balance.
+
+There is therefore never a shortfall fo energy in our calculator -- it assumes that, if needed, energy can always be imported.
+
+If there is too much energy then it is just noted as being "over generation / exports"
+
+This balancing mostly happens in the year sheets. In particular, the line marked 'Balancing imports' (about row 103) works out the shortfall that must be met by importing fuels. 
+
+## For electricity
+
+In the UK calculator, ff you demand electricity, but there isn't enough: gas generation is built to fill the shortfall. To adapt this approach to a different country, the most important thing to do is to decide whether gas, coal or oil generation would be used to cover the shortfall. 
+
+The calculations happen in sheet I.a which, at the top:
+
+1. Reads the demand for electricity from the year sheets -- V.01 Electricity (delivered to the end user) 
+2. Reads the supply of electricity provided by the other electricity supply sectors from the year sheets -- V.02 Electricity (supplied to grid)
+
+Both of these are taken from the row labeled 'Subtotal.I.a' in the year sheets (about row 80), which you will see calculates the total before the values from sheet I.a. are included.
+
+Working down sheet I.a., rows 229 and 239 deduct the electricity supplied by legacy oil and coal generation from the demand and then row 249 works out how much gas generation is therefore needed in rows 251, onwards. The demand and supply from I.a. is then picked up by the Year sheet below the 'Subtotal.I.a.' line to give the actual total demand and supply of electriity in that year, which should balance.
+
+The India calculator follows a slightly different approach. They choose coal as the type of generation that makes up a shortfall in demand. They implement this in sheet I.d which is like the UK's I.a worsheet, but simpler because it only considers coal. 
+
+The difference from the UK arises because they also have a sheet I.b., where the user can choose how much coal generation should be built. There is no problem in doing this. All that happens is that, when the user makes their choice about how much coal generation to build, instead of specifying exactly how much should be built, they are specifying the minimum that must be built. Sheet I.d. may increase the total, beyond what the user has asked for, if that is what is needed for electricity supply to meet demand.
 
 
-Note: add something on balancing imports? – this may be partially covered in the vectors section
+## Other approaches
 
+For the situation where the user's choices result in not enough energy being supplied to meet demand, instead of automatically building new generation, an alternative would be to allow there to be a shortfall of energy (which would be equivalent to a black-out in some parts of the country), but signal this very strongly to the user. This is acceptable, but will make things more complicated for the user and means the default (all at level 1) pathway will look odd to users, because it will start with a shortfall of energy.
+
+For the situation where there is too much energy, an alternative is to overrule a users choice so that, for example, even though they have chosen Level 4 nuclear the system only builds Level 2 nuclear because that is all that is needed. We strongly recommend that this is NOT done: 
+
+1. it can be confusing to users and 
+2. it requires the tool to have a preference between, say, wind energy and nuclear energy, which may not be shared by the user.
 
 
