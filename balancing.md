@@ -1,10 +1,22 @@
 # Appendix 5: What happens when supply exceeds demand?
 
-Through your choices, you specify the demand for energy and whether it is in the form of electricity, solid fuels, liquid fuels or gaseous fuels.
+When using the calculator, through your choices you specify:
 
-You also specify the amount of low carbon generation that will be built, the amount of bioenergy that will be produced and imported and (in the UK Excel spreadsheet) the amount of domestic fossil fuels that will be extracted. 
+* The demand for energy (e.g., by indicating how far people will travel)
+* The type of energy demanded (e.g., by specifying electric cars, the demand will be for electricity, otherwise it will be for liquid fuels)
+* The amount of low carbon generation that will be built or imported (e.g., nuclear power stations)
+* The area of biomass that will be planted
+* The amount of bioenergy that will be imported
+* (In the spreadsheet only) the quantity of fossil fuels that will be dug from the ground.
 
-But what happens when the supply you choose, doesn't match the demand?
+However, it is interesting to see what you haven't specified:
+
+* The amount of coal or gas generation that will be built
+* The amount of coal, oil and gas that will be imported
+
+Which is surprising, since in the UK coal and gas supply most of the electricity, and imported fossil fuels supply most of our energy needs. You'd therefore expect that the demand for energy would exceed the supply of energy that you have chosen. 
+
+So, what happens when the supply you choose isn't enough to meet the demand you've chosen?
 
 The answer is slightly different depending on whether the imbalance is in:
 
