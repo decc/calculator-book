@@ -6,7 +6,14 @@ The first step is to decide how to divide up the energy and emissions system, an
 
 In the UK calculator, industry was modelled as one sector, but the calculator of the Belgian region of Wallonia split industry into a variety of sectors so it could be more accurately modelled. The Indian calculator splits electricity supply into low-carbon technologies and conventional technologies, which the team decided was a very useful distinction for reporting results.  Or the Chinese split of rural and urban transport. NEED TO ADD MORE INFO HERE  
 
-In general you should aim to have as few sectors as possible so that it is quick to use the tool, but you must include all the sectors that people expect, even if they are small (for example, if most people think that rooftop wind turbines are an important potential energy source, then it should be included even if this is factually incorrect).  
+In general you should aim to have:
+
+1. as few sectors as possible so that it is quick to use the tool,
+2. ... but covering the whole economy and all emissions (it is best _not_ to ignore land use or industrial process emissions)
+3. ... but you must include all the sectors that people expect, even if they are small (for example, if most people think that rooftop wind turbines are an important potential energy source, then it should be included even if this is factually incorrect).  
+
+As a rule of thumb, 40 sectors is about right. In approach, we reccomend starting top down, rather than working bottom up (i.e., don't start my thinking of all the possible types of vehicle and how they might be modelled, start by thinking about the transport sector, and what are the fewest sub-divisions that are possible)
+
 
 For reference, here is a list of the sectors that most calculators so far have used:
 
