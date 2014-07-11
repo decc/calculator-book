@@ -19,8 +19,8 @@ Choice around:
 
 We went for two different web interfaces:
 
-1. One that sticks very closely to the Excel spreadsheet, presenting 40 or so choices, many consequences, using number and being quite dry. Target is people who are already interested in the subject
-2. One that has only 14 chocies, displays only a few consequences, mainly presents pretty graphics. Target is people who are not initially interested.
+1. One that sticks very closely to the Excel spreadsheet, presenting 40 or so choices, many consequences, using number and being quite dry. Target is people who are already interested in the subject. (In the UK, we call this [the webtool](http://2050-calculator-tool.decc.gov.uk)).
+2. One that has only 14 chocies, displays only a few consequences, mainly presents pretty graphics. Target is people who are not initially interested. (In the UK we call this [my2050](http://my2050.decc.gov.uk)).
 
 ## What do you need to build one?
 
@@ -55,6 +55,16 @@ You may be tempted to:
 
 1. Try and drive the Excel spreadsheet directly, using Microsoft interfaces. We've found that this is too slow and too unreliable for a good user experience.
 2. Put more than 40 levers on the online interface. We found that this means you can't get a good overview of what it going on, and takes too long for people to use.
+
+## Reducing the number of choices you present to the user
+
+You will probably want to have a version of the web interface for experts, that pretty much exactly replicates the Excel, but in a quicker, easier to use form. You may also want to have a simpler web interface for non-experts (in the UK we call this [my2050](http://my2050.decc.gov.uk)). To make it simpler, one of the things that you may need to do is to reduce the number of choices you present to the user.
+
+This involves going through each choice in the Excel and deciding whether to:
+
+A. Keep the choice in the simple interface (e.g., Nuclear power was kept in the UK my2050 version)
+B. Not include the choice, but instead leave it set at one level (e.g., Geosequestration is always set at level 1 in the UK my2050 version)
+C. Combine the choice with another choice (e.g., The Heating Choice lever in the UK my2050 version actually controls 4 levers in the Excel spreadsheet at the same time).
 
 ## Resources
 
