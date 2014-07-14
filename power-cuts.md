@@ -7,7 +7,7 @@ There are two ways this could be modelled:
 1. On the demand side (which we prefer)
 2. On the supply side
 
-# Demand side modelling of unserved demand 
+## Demand side modelling of unserved demand 
 
 To model power cuts on the demand side, for the present day, just model the actual demand for energy that is actually supplied. Don't try and indicate or model what the demand for energy would have been, if only the supply had been higher. 
 
@@ -23,7 +23,7 @@ This approach is preferred, because:
 1. its estimates for today will match, roughly, National Statistics and
 2. it will prevent the user from creating any impossible pathways (see below).
 
-# Supply side modelling of unserved demand
+## Supply side modelling of unserved demand
 
 To model power cuts on the supply side, model all the demand sectors as if demand could always be met by supply. This means making an estimate of the demand that isn't met, because people can't get the energy they need.
 
@@ -46,7 +46,7 @@ The disadvantages of this approach are:
 3. It allows the user to create seemingly impossible pathways (if they don't spot that their emissions are low or energy security is high because of un-met demand).
 
 
-# Implications for fuel exports
+## Implications for fuel exports
 
 In both approaches, fuel that is available to export will be calculated automatically, based on the assumption that whatever hasn't been used domestically, can be exported. That means that if you assume, or allow the user to choose, a fall in the amount of unserved power, the user should also see a fall in the volume of exports. If it is topical, then it might be worth showing the reduction in export income as a display in the tool.
 
