@@ -26,7 +26,7 @@ power-cuts.md
 bioenergy.md
 how-the-webtool-works.md
 going-further.md
-Schoolsworkshop.md
+Schoolworkshop.md
 
 # This isn't written yet
 todo.md
