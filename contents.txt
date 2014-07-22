@@ -24,6 +24,7 @@ calculating-emissions.md
 stress-test.md
 power-cuts.md
 bioenergy.md
+costs.md
 how-the-webtool-works.md
 going-further.md
 Schoolworkshop.md
