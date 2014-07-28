@@ -16,3 +16,10 @@ If you want to add a section, create a new file with the text and then add it in
 # Adding images
 
 Images can't be added through the online interface (yet).
+
+To add them through the command line:
+
+1. Put the image in the figures folder
+2. Refer to the image ![Description of the image](figures/filename-of-image.png)
+
+Note that it is important that the image url starts figures and not /figures
