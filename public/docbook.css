@@ -2,7 +2,7 @@
   display: none;
 }
 
-.sect1, .toc {
+.sect1, .toc, .titlepage {
   max-width: 40em;
   padding-bottom: 50px;
   margin-left: auto;
@@ -29,7 +29,7 @@ body {
   padding: 0 10px 0 10px;
 }
 
-.navfooter hr {
+.navfooter hr, .titlepage hr {
   display: none;
 }
 
