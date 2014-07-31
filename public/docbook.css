@@ -4,9 +4,12 @@
 
 .sect1, .toc, .titlepage {
   max-width: 40em;
-  padding-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.sect1 {
+  padding-bottom: 50px;
 }
 
 body {
