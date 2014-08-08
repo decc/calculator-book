@@ -7,6 +7,7 @@ introduction.md
 getting-started.md
 mapping-your-emissions.md
 building-the-spreadsheet.md
+quality-assurance.md
 building-the-webtool.md
 launching-your-calculator.md
 influencing-policy.md
@@ -28,6 +29,7 @@ costs.md
 how-the-webtool-works.md
 going-further.md
 Schoolworkshop.md
+quality-assurance-checklists.md
 
 # This isn't written yet
 todo.md
