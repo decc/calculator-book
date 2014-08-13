@@ -30,6 +30,7 @@ how-the-webtool-works.md
 going-further.md
 Schoolworkshop.md
 quality-assurance-checklists.md
+faq.md
 
 # This isn't written yet
 todo.md
