@@ -90,20 +90,84 @@ The interface between the webtool front end and the back end model is set up in 
 The results of the model are read from references that effecetively refer to the output named ranges (e.g. output.finalenergydemand, as described above).  data_from_model.rb creates a data structure in the JSON data-interchange format, which comprises of a number of labelled arrays which hold the data contained within the input/output Excel named ranges.  This JSON file can be viewed by appending 'data' to the end of the webtool URL, e.g: http://2050-calculator-tool.decc.gov.uk/pathways/11111111111111111111111111111111111111111111111111111/data
 
 ## Getting from json to a chart on screen
-Within data_from_model.rg, an array (nested within the larger array) called 'final_energy_demand' is created and set equal to the contents of the output.finalenergydemand named range in the Excel file.  This is done with the following line of code:
+This explanation continues to use the final energy demand data as an example, but applies generally to all charted data.  Within data_from_model.rg, an array (nested within the larger array) called 'final_energy_demand' is created and set equal to the contents of the output.finalenergydemand named range in the Excel file.  This is done with the following line of code:
 
     'final_energy_demand' => excel.output_finalenergydemand
 
-The 'tables' in the JSON file are converted into a 'hash' [is this right? - i think so , consistent with the next step].
+The next stage of the process occurs in the relevant javascript file where the chart is to be created.  For example, final energy demand is charted in the primary_energy.js JavaScript file.
 
-The next stage of the process occurs in the relevant javascript file where the chart is to be created.  For example, final energy demand is charted in the primary energy
+At the top of this file (primary_energy.js) a setup function creates three empty charts (for energy demand, primay supply and emissions), making use of the D3 JavaScript library, which allows the control of visual objects using data.
+
+The final energy demand data is converted into a 'hash' called 'demand' which is required before it can be charted.  (NB a hash is an array where each element has an associated key or index.)  This is done using the following line of code, which makes use of convert_table_to_hash function, which is defined within the file
+
     demand = convert_table_to_hash(pathway.final_energy_demand);
 
-^ this uses the convert_table_to_hash function, which is defined within the file.
+The chart drawing function is then called, specifying that the 'demand'  hash be used to provide the data.  When a user changes their pathway the hash is updated from the new results and the chart is redrawn with the new data.
+
+The primary_energy.js file also contains a 'Teardown' function which is called when the user selects a new view (e.g. costs in context).  This function stops the chart drawing fuctions and tidies up ready for the new view to be loaded.
 
 ## Getting from the user's clicking to a new pathway
-...convert levels into URL - letters for decimals
-...teardown and update methods... in config.ru?
+The users seclected pathway is encoded into the webtools URL (NB: this isn't visible when using Internet Explorer).  For example, the 'all level 1s' pathway looks like this:
+    http://2050-calculator-tool.decc.gov.uk/pathways/11111111111111111111111111111111111111111111111111111/primary_energy_chart
 
+Each of the 1s indicate that level 1 is selected for a particular lever.  If the user selects, for example, level 2 for one of the levers the URL will update, and the corresponding 1 will change to a 2.  For example, if the nuclear lever, which corresponds to the first of the 1s is changed to level 2, the URL becomes:
 
-##Updating the webtool for your country's model (new section added by Greg)
+http://2050-calculator-tool.decc.gov.uk/pathways/*2*1111111111111111111111111111111111111111111111111111/primary_energy_chart
+
+When a user chooses a non-integer level (by repeatedly clicking on the level buttons to increment the level by 0.1) this is encoded as a letter within the URL, e.g. 1.1 is encoded as 'b'.  This process is contained within the twenty-fifty/src/javascripts/controller.js JavaScript file, the excerpt from which below, shows the full decimal to letter mapping:
+
+ float_to_letter_map = {
+    "": "0",
+    1.0: "1",
+    1.1: "b",
+    1.2: "c",
+    1.3: "d",
+    1.4: "e",
+    1.5: "f",
+    1.6: "g",
+    1.7: "h",
+    1.8: "i",
+    1.9: "j",
+    2.0: "2",
+    2.1: "l",
+    2.2: "m",
+    2.3: "n",
+    2.4: "o",
+    2.5: "p",
+    2.6: "q",
+    2.7: "r",
+    2.8: "s",
+    2.9: "t",
+    3.0: "3",
+    3.1: "v",
+    3.2: "w",
+    3.3: "x",
+    3.4: "y",
+    3.5: "z",
+    3.6: "A",
+    3.7: "B",
+    3.8: "C",
+    3.9: "D",
+    0.0: "0",
+    4.0: "4"
+  };
+
+The string of characters within the URL that represents the selected pathway is stored in an array called 'code'.  This array is then picked up in the data_from_model.rb Ruby file, where it is converted back into a series of numbers in an array named 'choices', to match the format in which the level selections appear in the Excel model:
+
+    choices = convert_letters_to_float(code.split(''))
+
+The named range within the Excel model, input.choices (or the C translation equivalent) is then set equal to the new pathway as contained in the 'choices' array:
+
+    excel.input_choices = choices
+
+With the new pathway selection in place the model is recalculated and the new results are ready to be picked up.
+
+<!--  
+##Updating the webtool for your country's model (new section added by Greg - not sure this is the right place for this?)
+
+step 1 - read the above
+need to implement the named ranges required - any additions/deletions should be represented in the 
+translate the excel file to C, then compile the C
+start the server - and you should see you new model.
+need to edit the JavaScript views to make cosmetic changes, or make more fundamental changes to the way in which the results are displaid.
+-->
