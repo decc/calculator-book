@@ -13,8 +13,9 @@ The costs analysis is intended to encompass the entire energy system, so that al
 
 ![](figures/heatpump-pipeline.png)
 
-2. **Operating and maintenance costs**: the full cost of running and maintaining all of the required ![](figures/controlcentre-turbine.png)
-technology and infrastructure, again from individual homes to the national level.
+2. **Operating and maintenance costs**: the full cost of running and maintaining all of the required technology and infrastructure, again from individual homes to the national level.
+
+![](figures/controlcentre-turbine.png)
 
 3. **Fuel costs**: the costs of all involved fuels, from municipal sewage to enriched uranium.
 
@@ -61,9 +62,13 @@ d. The year in which the cost is valid, i.e. is this an estimate of the cost of 
 e. Some additional supplementary information, e.g. the typical life
 
 **2. Create ranges for the capital cost estimates for 2010 and 2050**
+
 a. To construct the range for 2010, gather all of the 2010 based estimates
+
 b. Set the bottom of the range equal to the lowest estimate received (from wiki: £28,990).
+
 c. Set the top of the range equal to the highest estimate received (from wiki: £ 59,440), to yield a range from £28,990 to £59,440.
+
 d. The 2050 range is constructed in the same way, except as described above, the top of the range is set equal to the top of the 2010 range (to cautiously assume that the technology costs do not fall).   This yields a range of £14,125 to £59,440 for 2050.
 
 **3. Create a linear cost profile from 2010 to 2050**
