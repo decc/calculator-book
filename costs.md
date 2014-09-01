@@ -7,6 +7,7 @@ The costs analysis answers the questions raised above, telling the user how much
 
 ##Gathering costs data
 The costs analysis is intended to encompass the entire energy system, so that all of the financial implications of the users choices are accounted for.  Costs are categorised into three types:
+
 1. **Capital expenditure**: the full costs of all capital components, from the heat pumps installed in individual homes, through to large infrastructure projects.
 
 ![](./figures/heatpump-pipeline.png)
@@ -47,10 +48,15 @@ To illustrate the approach above, the following steps outline the process used t
 
 **1. Estimates are gathered via the wiki**
 Participants enter their estimates using the form provided, including:
+
 a. The source of their evidence
+
 b. A label for the estimate
+
 c. The capital cost in the format specified by the contextual help window, e.g. ‘£(2011) 30990/car’, which includes details of the currency (£), the year in which the nominal value is based (2011 money), the actual estimate (30990), and the unit for which the estimate is based (1 car).
+
 d. The year in which the cost is valid, i.e. is this an estimate of the cost of an electric vehicle in 2010 or in 2050?
+
 e. Some additional supplementary information, e.g. the typical life
 
 **2. Create ranges for the capital cost estimates for 2010 and 2050**
@@ -77,16 +83,17 @@ In the ‘CostAbsolute’ worksheet all of the costs from the individual sectors
 The amortised costs show the total costs over the entire modelled period to 2050 prorated to give an annual average.
 In the ‘CostPerCapita’ worksheet, the above cost summaries are divided by the population projections shown in the ‘Global assumptions’ worksheet, to give per person estimates.  Among these results is the amortised per capital cashflow summed over all of the sectors, which serves a convenient single figure with which to represent an entire pathways costs.
 
-[!](./figures/cost-range-chart.png)
+![](./figures/cost-range-chart.png)
 
 On the webtool, there are three main graphical representations of the costs:
-1. Costs in context
+
+**1. Costs in context**
 This shows the single amortised cost per capita figure for all of the example pathways, with estimates of today’s energy costs and GDP in 2050 for context
 
-2. Costs compared
+**2. Costs compared**
 Amortised cost per capita is split by broad category, revealing the main drivers of cost
 
-3. Costs Sensitivities
+**3. Costs Sensitivities**
 This allows users to flex the assumptions behind the cost analysis by allowing them to choose high, medium or default estimates for each sector.  The impact this has on the cost calculation is highlighted.
 
 
