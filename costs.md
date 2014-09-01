@@ -6,18 +6,19 @@ The four effort levels of choice that are available to the user are based on wha
 The costs analysis answers the questions raised above, telling the user how much their pathway costs compared to other mitigation pathways, and compared to not tackling climate change.
 
 ##Gathering costs data
+
 The costs analysis is intended to encompass the entire energy system, so that all of the financial implications of the users choices are accounted for.  Costs are categorised into three types:
 
 1. **Capital expenditure**: the full costs of all capital components, from the heat pumps installed in individual homes, through to large infrastructure projects.
 
-![](./figures/heatpump-pipeline.png)
+![](figures/heatpump-pipeline.png)
 
-2. **Operating and maintenance costs**: the full cost of running and maintaining all of the required ![](./figures/controlcentre-turbine.png)
+2. **Operating and maintenance costs**: the full cost of running and maintaining all of the required ![](figures/controlcentre-turbine.png)
 technology and infrastructure, again from individual homes to the national level.
 
 3. **Fuel costs**: the costs of all involved fuels, from municipal sewage to enriched uranium.
 
-![](./figures/uranium-biocrop.png)
+![](figures/uranium-biocrop.png)
 
 An open online wiki was used in the development of the UK Calculator costs analysis, allowing interested parties from industry, academia, NGOs and civil society to submit cost information.  The wiki provided entry field for all required supplementary information and contextual help to ensure that users submitted evidence consistently.  For example, when submitting data for the cost of an offshore wind turbine, it was necessary to specify a number of details:
 
@@ -30,7 +31,7 @@ An open online wiki was used in the development of the UK Calculator costs analy
 4. the year in which the price was valid (e.g. 2010), to allow for inflation to be accounted for
 This approach allowed the costs data to be efficiently gathered and organised in a standardised fashion.
 
-![Figure X: The UK 2050 Calculator Costs Wiki](./figures/costs-wiki-screenshot.png)
+![Figure X: The UK 2050 Calculator Costs Wiki](figures/costs-wiki-screenshot.png)
 
 Predictable, there is a high degree of uncertainty around many of the cost estimates required for the analysis, particularly in 2050.  In order to account for this, submitters were asked to enter their estimates as a range, by specifying both high and low estimates for each entry.
 The cost ranges submitted were then combined to form an overall range for each technology and type (e.g. maintenance costs), with the bottom of the range being based on the lowest of all of the estimates submitted and the top of the range being based on the highest.  This was repeated for both 2010 and 2050.  A few refinements were then made to supplement this approach:
@@ -41,7 +42,7 @@ The cost ranges submitted were then combined to form an overall range for each t
 
 3. It was assumed that the costs follow a linear path between 2010 and 2050
 
-![Figure X: constructing cost estimate ranges](./figures/cost-range-chart.png)
+![Figure X: constructing cost estimate ranges](figures/cost-range-chart.png)
 
 ##Technology example
 To illustrate the approach above, the following steps outline the process used to construct the capital cost range estimates for a particular technology: Electric Vehicles
@@ -75,15 +76,21 @@ The default may be set at the 35th percentile between the high and low cost curv
 
 The cost estimates in the UK Calculator are summarised in different ways in order to more easily make comparisons between pathways.
 In the ‘CostAbsolute’ worksheet all of the costs from the individual sectors are drawn together.  (This is done using index match formula similar to those used in the year sheets; see the ‘Complex Excel Formulae’ section of Annex 1 for more details.)   Further calculations are performed to reveal:
+
 * Cashflow implications
+
 * NPV (net present value)
+
 * Financing costs
+
 * Amortised cashflow
+
 * Amortised NPV
+
 The amortised costs show the total costs over the entire modelled period to 2050 prorated to give an annual average.
 In the ‘CostPerCapita’ worksheet, the above cost summaries are divided by the population projections shown in the ‘Global assumptions’ worksheet, to give per person estimates.  Among these results is the amortised per capital cashflow summed over all of the sectors, which serves a convenient single figure with which to represent an entire pathways costs.
 
-![](./figures/cost-range-chart.png)
+![](figures/cost-range-chart.png)
 
 On the webtool, there are three main graphical representations of the costs:
 
