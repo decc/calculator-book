@@ -18,8 +18,11 @@ The webtool is based on a C version of the Excel model, which is translated auto
 The webtool is based on a translated version of the Excel model, so this must be finished (or very close to) before the webtool can be put together.  As well as providing the calculation engine for the model, many other aspects of the webtool also pass directly from the Excel version.  This includes all the labels for the levers, the level descriptions and the example pathways.
 There are a couple of pitfalls to avoid with the Excel file, which can cause issues with the webtool creation process.  Most notably, the Excel file should contain no VBA macros, and no links to external Excel files, either within formulae or named cells/ranges.  A macro that lists any remaining external links is available here: http://2050-calculator-tool-wiki.decc.gov.uk/pages/217 (Links to external named cells must be identified manually using the 'name manager', which is accessed via the formulas toolbar.)
 All of the development of the webtool was done on the unix platform, i.e. a Macintosh or linux (we recommend Ubuntu 12.04, 64 bit).  To avoid compatibility issues, it is highly recommended that further development for other country webtools should continue on this platform.  No successful attempts have been made to use this system on Windows (although a Windows computer running an Ubuntu virtual machine would be an option).
+
 Some previous experience of programming is beneficial, as although much of the process is automated, some editing of the underlying code will probably be required.  The backend of the model is written predominantly in the ruby programming language, while the front end is largely JavaScript based.  Familiarity with these two languages would be particularly beneficial.  The extent to which the Ruby code needs to be adapted depends on how far the new Excel model deviates in structure from the UK model.  Similarly, more adaptation of the JavaScript is required if it is intended to diverge from the UK webtool front end.
-The webtool source code freely available on GitHub (a web-based hosting service for software development projects that uses the Git revision control system).  Some knowledge of this platform would be useful, particularly the unix terminal commands that can used to interact with it.
+
+The webtool source code freely available on GitHub (a web-based hosting service for software development projects that uses the Git revision 
+control system).  Some knowledge of this platform would be useful, particularly the unix terminal commands that can used to interact with it.
 The fasted way to get started with the webtool process when using Ubuntu is to run a pre-prepared set-up script that automatically performs a number of initial steps.  This script is available on the webtool GitHub repository, within the ‘util’ folder: https://github.com/decc/twenty-fifty/blob/master/util/setup-2050-server-script.sh
 When run, the script performs the following actions:
 
@@ -45,7 +48,7 @@ When the twenty-fifty GitHub repository is cloned (as occurs when the above scri
 
 In the top level of the twenty-fifty directory, there are a number of files and folders - the contents of which are as follows
 
-Files
+**Files:**
 
 * config.ru - sets up the server and loads the default view
 * CREDITS - a list of people who helped build the Calculator
@@ -57,7 +60,7 @@ Files
 * LICENCE - details of the webtool's copyright
 
 
-Directories
+**Directories:**
 
 * model
     + compile_c_version_if_needed.rb - compiles the translated C code if needed
@@ -150,7 +153,7 @@ The users seclected pathway is encoded into the webtools URL (NB: this isn't vis
 
 Each of the 1s indicate that level 1 is selected for a particular lever.  If the user selects, for example, level 2 for one of the levers the URL will update, and the corresponding 1 will change to a 2.  For example, if the nuclear lever, which corresponds to the first of the 1s is changed to level 2, the URL becomes:
 
-http://2050-calculator-tool.decc.gov.uk/pathways/*2*1111111111111111111111111111111111111111111111111111/primary_energy_chart
+http://2050-calculator-tool.decc.gov.uk/pathways/**2**1111111111111111111111111111111111111111111111111111/primary_energy_chart
 
 When a user chooses a non-integer level (by repeatedly clicking on the level buttons to increment the level by 0.1) this is encoded as a letter within the URL, e.g. 1.1 is encoded as 'b'.  This process is contained within the twenty-fifty/src/javascripts/controller.js JavaScript file, the excerpt from which below, shows the full decimal to letter mapping:
 
@@ -211,7 +214,3 @@ With the new pathway selection in place the model is recalculated and the new re
 8. Edit the JavaSript views to reflect any desired presentational changes
 8. Run 'rackup' command from the top of the twenty-fifty directory and navigate to http://0.0.0.0:9292
 
-translate the excel file to C, then compile the C
-start the server - and you should see you new model.
-need to edit the JavaScript views to make cosmetic changes, or make more fundamental changes to the way in which the results are displaid.
--->
