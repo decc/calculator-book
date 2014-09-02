@@ -1,18 +1,13 @@
-	***Greg: this is a still very rough, unfinished draft - don't pay too much attention!
-
 # How the webtool works
 ## Overview
 The ‘Webtool’ is a browser-based version of Excel model that can be accessed by the public over the internet: http://2050-calculator-tool.decc.gov.uk.  It performs the same functions as the Excel model and produces identical results.
 	 
-
-
 The webtool was developed to provide improved experience for users of the Calculator.  It has several advantages over the Excel version:
 	 
-Simpler: a pathway can be constructed simply by clicking a few buttons.  There is no need to be a confident Excel user (or even have a copy of Excel)
+Simpler: a pathway can be constructed simply by clicking a few buttons.  There is no need to be a confident Excel user (or even have a copy of Excel).
 	 
-All on one page: the controls and results can be seen simultaneously on one page (unlike the Excel version which
+All on one page: the controls and results can be seen simultaneously on one page (unlike the Excel version which requires a lot of scrolling around)
 Faster: the model recalculates in microseconds, giving the user instant feedback on their pathway choices
-
 
 The webtool is based on a C version of the Excel model, which is translated automaticaly using some custom software, which is open source and available from DECC's GitHub page.
 
@@ -20,39 +15,85 @@ The webtool is based on a C version of the Excel model, which is translated auto
 
 
 ## Getting set up
-The webtool is based on a translated version of the Excel model, so this must be finalised (or very close to) before the webtool can be put together.  As well as providing the calculation engine for the model, many other aspects of the webtool also pass directly from the Excel version.  These include all the labels for the levers, the level descriptions and the example pathways.
-There are a couple of pitfalls to avoid with the Excel file, which can cause issues with the webtool creation process.  Most notably, the Excel file should contain no VBA macros, and no links to external Excel files, either within formulae or named cells/ranges.  A macro that list any remaining external links is available here: http://2050-calculator-tool-wiki.decc.gov.uk/pages/217 (Links to external named cells must be identified manually using the 'name manager', which is accessed via the formulas toolbar.)
-All of the development of the webtool was done on the unix platform, i.e. a Macintosh or linux (we recommend Ubuntu 12.04, 64 bit).  To avoid compatibility issues, it is highly recommended that further development for other country webtools should continue on this platform.  No successful attempts have been made to use this system on Windows, although a Windows computer running an Ubuntu virtual machine would be an option.
-Some previous experience of programming is beneficial, as although much of the process is automated, some editing of the underlying code is required.  The backend of the model is written predominantly in the ruby programming language, while the front end is largely JavaScript based.  Familiarity with these two languages would be particularly beneficial.  The extent to which the Ruby code needs to be adapted depends on how far the new Excel model deviates in structure from the UK model.  Similarly, more adaptation of the JavaScript is required if it is intended to diverge from the UK webtool front end.
-The webtool source code freely available on GitHub (a web-based hosting service for software development projects that use the Git revision control system).  Some knowledge of this platform would be useful, particularly the unix terminal commands that can used to interact with it.
-The fasted way to get started with the webtool process wehn using Ubuntu is to run a pre-prepared set-up script that automatically performs a number of initial steps.  This script is available on the webtool GitHub repository, within the ‘util’ folder: https://github.com/decc/twenty-fifty/blob/master/util/setup-2050-server-script.sh
+The webtool is based on a translated version of the Excel model, so this must be finished (or very close to) before the webtool can be put together.  As well as providing the calculation engine for the model, many other aspects of the webtool also pass directly from the Excel version.  This includes all the labels for the levers, the level descriptions and the example pathways.
+There are a couple of pitfalls to avoid with the Excel file, which can cause issues with the webtool creation process.  Most notably, the Excel file should contain no VBA macros, and no links to external Excel files, either within formulae or named cells/ranges.  A macro that lists any remaining external links is available here: http://2050-calculator-tool-wiki.decc.gov.uk/pages/217 (Links to external named cells must be identified manually using the 'name manager', which is accessed via the formulas toolbar.)
+All of the development of the webtool was done on the unix platform, i.e. a Macintosh or linux (we recommend Ubuntu 12.04, 64 bit).  To avoid compatibility issues, it is highly recommended that further development for other country webtools should continue on this platform.  No successful attempts have been made to use this system on Windows (although a Windows computer running an Ubuntu virtual machine would be an option).
+Some previous experience of programming is beneficial, as although much of the process is automated, some editing of the underlying code will probably be required.  The backend of the model is written predominantly in the ruby programming language, while the front end is largely JavaScript based.  Familiarity with these two languages would be particularly beneficial.  The extent to which the Ruby code needs to be adapted depends on how far the new Excel model deviates in structure from the UK model.  Similarly, more adaptation of the JavaScript is required if it is intended to diverge from the UK webtool front end.
+The webtool source code freely available on GitHub (a web-based hosting service for software development projects that uses the Git revision control system).  Some knowledge of this platform would be useful, particularly the unix terminal commands that can used to interact with it.
+The fasted way to get started with the webtool process when using Ubuntu is to run a pre-prepared set-up script that automatically performs a number of initial steps.  This script is available on the webtool GitHub repository, within the ‘util’ folder: https://github.com/decc/twenty-fifty/blob/master/util/setup-2050-server-script.sh
 When run, the script performs the following actions:
-	 
-	·        downloads and installs all required dependencies
 
-	·        downloads and installs all ruby (version 2.1)
+* downloads and installs all required dependencies
 
-	·        downloads all the source code from GitHub
+* downloads and installs ruby (version 2.1)
 
-	·        compiles the c version of the model
+* downloads all the source code from GitHub
 
-	·        downloads and installs the required webserver software
+* compiles the c version of the UK model
 
-	·        the interface between ruby and the server
+* downloads and installs the required webserver software
 
-	 
+* installs the interface between ruby and the server
 
-If all of the scripts actions are completed successfully, it should create a working local server version of the UK webtool.  To start the server, navigate to the twenty-fifty folder created by script and enter the terminal command ‘rackup’.  The terminal will then return the port number (e.g. 9292) required to interact with the server in a browser.  The port number should be appended to the IP address of your local machine, which should be 0.0.0.0, to form a URL as follows: 0.0.0.0:9292.  When entered into your browser, this URL should open a functioning version of the UK Calculator running locally on your computer (as opposed to the UK Calculator remote webserver).  If this opens and runs successfully all of the required components are in place and ready to be adapted for a new version for the county in question.
+If run successfully, the script should create a working local server version of the UK webtool.  To start the server, navigate to the twenty-fifty folder created by script and enter the terminal command ‘rackup’.  The terminal will then return the port number (e.g. 9292) required to interact with the server in a browser.  The port number should be appended to the IP address of your local machine, which should be 0.0.0.0, to form a URL as follows: 0.0.0.0:9292.  When entered into your browser, this URL should open a functioning version of the UK Calculator running locally on your computer (as opposed to the UK Calculator remote webserver).  If this opens and runs successfully all of the required components are in place and ready to be adapted for a new version for the county in question.
 
 Separate instructions for getting set-up on OS X are available here: https://github.com/decc/twenty-fifty/blob/master/README.md
-	[^ does this bit need to be updated?]
-	[Need something on the requirements of the Excel file – with all inputs and output in named ranges]
 
 ## Contents of each of the folders
-[copy stuff from github / ]
 
-	 
-## Turning the excel spreadsheet into code
+When the twenty-fifty GitHub repository is cloned (as occurs when the above script is run), a number of directories and folders will be downloaded to your computer.  These are listed below
+
+In the top level of the twenty-fifty directory, there are a number of files and folders - the contents of which are as follows
+
+Files
+
+* config.ru - sets up the server and loads the default view
+* CREDITS - a list of people who helped build the Calculator
+* Gemfile - a list of Ruby Gem dependencies required for the webtool (installed when bundle is run)
+* HACKING.md - instructions for adapting the webtool
+* README.md - an explanation of the webtool
+* Dockerfile - a quick way of getting a server running with this code
+* Gemfile.lock - shows successfully installed Gems once Bundle had been run
+* LICENCE - details of the webtool's copyright
+
+
+Directories
+
+* model
+    + compile_c_version_if_needed.rb - compiles the translated C code if needed
+    + model.o - an intermediate of the C version of the model
+    + test_model.rb - makes comparrison of new version vs. the previous version for change confirmation
+    + compile_c_version_of_excel.rb - compiles the C translated from the Excel model
+    + model.rb - an interface between the C model and the Javascript front end
+    + tests - output from the tests
+    + data_from_model.rb - specify data inputs and outputs from the C model 
+    + model_version.rb - shows the version number from the Excel model
+    + translate_excel_into_c.rb - translates the Excel model into C code
+    + libmodel.so - an intermediate of the C version of the model
+    + model.xlsx - the Excel version of the model
+    + model.c - the C code translated from the Excel model
+    + README.markdown - an explanation of how to update the webool
+* src
+    + compile_template.rb
+    + index.html.erb
+    + javascripts
+        - application.js - all JavaScript is assembled into this file
+        - controller.js - JavaScript for the lever/level cotrols and ensures the right view is displayed
+        - util - some shared methods used by the charts
+        - views - the JavaScript files for the views (one file for each view)
+    + server.rb - deals with different browsers and old URLs
+    + stylesheets - the style sheets for the views
+* util
+    + setup-ubuntu-12.04.sh - a script for setting up a local version of the UK webtool
+    + generate_fractions.rb - handles appearance of the level buttons when a decimal is selected (e.g. level 2.7)
+    + generate_hatches.rb - generates striped hatches for use in the charts
+* public
+    + assets - directory containing one pagers, pictures and assembled application JavaScript and CSS files
+* contrib - directory containing 3rd party JavaScript libraries used by the webtool
+
+
+## Turning the Excel spreadsheet into code
+
 The Excel model (from version 3.5.2) uses a series of named ranges to identify the data inputs and outputs that interface with the webtool.  The ranges are named to reflect their purpose, with the input tables being named, for example 'input.choices' (which contains the users level 1-4 choices for all of the levers), and the ouput tables being named, for example, 'output.finalenergydemand' (which contains a time series from 2010 to 2050 of final energy demand split by the broad categories that appear in the webtool headline results charts).
 
 All of these tables are in a 'dense' format, meaning that they contain no superflous blank rows or columns.
@@ -77,9 +118,6 @@ input.types              output.finalenergydemand
                          output.version
 
 Table: Input and Output named ranges that recieve / pass data to from / to the webtool front end
-[Do I need a separate section where the named ranges are explained in turn in more detail?]
-
-
 
 Within the ‘twenty-fifty’ directory, created by the set-up script above, there is a sub-directory called ‘model’, and within this there is an Excel file: ‘model.xlsx’.  This is the Excel file on which the webtool is based, which is picked up from this locatin when the translation in run.  This Excel file should be replaced with the new version of the Excel Calculator for which the webtool is being converted.  The new Excel file should also be named ‘model.xlsx’.  Once in place this file is ready to be translated to the C version of the model - but before doing so, a couple of configuration files need to be edited to reflect any changes to the structure of the Excel model compared to the current UK version.  There is a single configuration file which contains the bulk of the edits required for the back-end of the model: ‘data_from_model.rb’.  This file creates the interface that enables the JavaScript used for the front end to communicate with the C model running on the webserver.
 NB The translation can actually be run before editing the configuration files to check that the translation actually runs.  It is a good idea to try this at an early stage to allow time to fix any issues with the spreadsheet that upset the translation process (like the macros and external references mentioned above).
@@ -162,11 +200,17 @@ The named range within the Excel model, input.choices (or the C translation equi
 
 With the new pathway selection in place the model is recalculated and the new results are ready to be picked up.
 
-<!--  
-##Updating the webtool for your country's model (new section added by Greg - not sure this is the right place for this?)
+##Updating the webtool for your country's model
+1. Finalise you Excel model
+2. Read all of this appendix
+3. Set up a laptop with a local version of the UK webtool
+4. Make sure all required model inputs and outputs are in (see detail above)
+5. Edit data_from_model.rb with details of changes to the named ranges in the previous step
+6. Run translate_excel_into_c.rb to translate the Excel model into C
+7. Run compile_c_version_of_excel.rb
+8. Edit the JavaSript views to reflect any desired presentational changes
+8. Run 'rackup' command from the top of the twenty-fifty directory and navigate to http://0.0.0.0:9292
 
-step 1 - read the above
-need to implement the named ranges required - any additions/deletions should be represented in the 
 translate the excel file to C, then compile the C
 start the server - and you should see you new model.
 need to edit the JavaScript views to make cosmetic changes, or make more fundamental changes to the way in which the results are displaid.
