@@ -51,7 +51,6 @@ The total demand for liquid hydrocarbons from the sectors in 2050 is 538 TWh (ce
 Therefore the calculator does not allocate biomass to specific sectors. The calculator determines the total demand for each fuel type (such as liquid hydrocarbons) by summing the demand across all sectors. The calculator then ensures that there is sufficient supply to meet this demand, subject to the choices made by the user of the calculator (see above “uses of biomass” and Appendix 5 on the balancing mechanism). The biomass supply that is determined by the user, as outlined above, is allocated to meet the total demand.
 
 The process outlined above is outlined below in figure 6.  
-
-**Figure** **6: summary of biomass arising, inter-conversion and end-use fuel** **destinations**
+![Summary of the UK Calculator bioenergy system](figures/bioenergy_diagram.png)
 
 
