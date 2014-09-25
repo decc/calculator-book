@@ -207,7 +207,7 @@ With the new pathway selection in place the model is recalculated and the new re
 1. Finalise you Excel model
 2. Read all of this appendix
 3. Set up a laptop with a local version of the UK webtool
-4. Make sure all required model inputs and outputs are in (see detail above)
+4. Make sure all required model inputs and outputs implemented in the Excel file (see detail above)
 5. Edit data_from_model.rb with details of changes to the named ranges in the previous step
 6. Run translate_excel_into_c.rb to translate the Excel model into C
 7. Run compile_c_version_of_excel.rb
