@@ -44,4 +44,25 @@ Fixed Assumtions that are required to calculate energy demand and emissions from
 
 * Basline GHG emissions (2007): separete Mt CO2e emissions figures for each greenhouse gas type (CO2, CH4, N2O and F (fluorines)), for each of the four subsectors in in the base year (2007).
 
-The rest of the fised assumptions provided in this section of the sector sheet relate to the supplementary air quality analysis, which is not explained here.
+The rest of the fixed assumptions provided in this section of the sector sheet relate to the supplementary air quality analysis, which is not explained here.
+
+
+##DERIVED ASSUMPTIONS
+In the derived assumptions a number of intermediate results,required to determine the overall sectoral energy demand and emissions, are calculated.
+
+1. Output index
+The output index (2007=100) is calculalated for each of the four subsectors by increasing the previous periods value by the chosen growth specified above the in the trajectory assumptions.  (The annual growth rate is raised to the power of the number of intervening years, usually 5, to account for the five-year periodicity of the model.)
+
+2. Energy demand multiplier
+The energy demand multiplier is calculalated for each of the four subsectors by increasing the previous periods value by the chosen growth specified above the in the trajectory assumptions.  (The annual growth rate is raised to the power of the number of intervening years, usually 5, to account for the five-year periodicity of the model.)
+
+3. Energy split by vector
+The energy split by vector (here, the vectors are broadly analgous the fuel types) is calculated for each of the four subsectors. [NEED TO ADD DETAIL HERE - is this subsector specific?]
+
+4. Process emissions intensity
+The process emissions intensity multiplier (to be applied to the baseline emissiion in 2007) is calculated here for each of the four sebsectors using the 'chosen' annual multiplier.  (Again the annual multiplier is raised by the number of years (usually five), to account for the model's five year periodicity.
+
+5. Process emissions growth
+[how is this different to the thing just above?]
+
+
