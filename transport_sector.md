@@ -2,7 +2,7 @@
 
 This section provides detail on the transport sector within the UK’s 2050 Calculator Excel workbook. It focuses on how the user’s transport “trajectory choices” feed through into the transport sector outputs, the method by which calculations are made and the underlying data sources.
 
-This section information from:
+This section contains information from:
 
 the public wiki: this provides general information on the 2050 Calculator, sets out the methodology and data used in the costs and air quality analysis, includes suggested improvements from stakeholders and provides answers to previous questions. See this link for the wiki: http://2050-calculator-tool-wiki.decc.gov.uk/pages/1. See this link for potential improvements that could be made to the transport sector in the UK’s 2050 Calculator spreadsheet: http://2050-calculator-tool-wiki.decc.gov.uk/pages/173
 the 2010 “2050 Pathways Analysis” report: this sets out the background on why the analysis has been undertaken, the broad analytical approach in the Calculator and detail on the four levels of potential decarbonisation to 2050 for each sector. See: https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/42562/216-2050-pathways-analysis-report.pdf
