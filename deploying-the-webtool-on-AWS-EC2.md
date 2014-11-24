@@ -1,3 +1,5 @@
+#This is still in draft
+
 #How to deploy the webtool on the AWS EC2 - a guide to getting your Calculator online for public use
 
 ##Introduction
@@ -13,19 +15,19 @@ Go to aws.amazon.com and select 'Create an account'
 
 2. Login and select EC2.  This opens the EC2 dashboard
 
-2. Chnage your region from the drop-down in the top right and menu
+3. Chnage your region from the drop-down in the top right and menu
 
-3. From the menu select 'Key Pairs' (A Key Pair is a bit like passwords for accessing your account/server, but it is  stored in a file on your computer so you don't have to rememeber it).
+4. From the menu select 'Key Pairs' (A Key Pair is a bit like passwords for accessing your account/server, but it is  stored in a file on your computer so you don't have to rememeber it).
 click - 'Create Key Pair'
 You will be prompted to choose a name for your new Key Pair.  Enter a name of your choice the name of your Key Pair, e.g. 'myAWSEC2'.  This name will be used to generate a file with a '.pem' extension, e.g. 'myAWSEC2.pem, that will automatically be downloaded to your computer.
 
-4. The following line of code will change the permissions of your Key Pair file so that only you can read it ()
+5. The following line of code will change the permissions of your Key Pair file so that only you can read it ()
 
     $ chmod 400 myASWEC2.pem
     
 
 
-3. On the dashboard, click Launch Instance.
+6. On the dashboard, click Launch Instance.
 
 Seach for Ubuntu 12.04 in the AWS Marketplace tab, and select an instance of the following type: 'Ubuntu Server 12.04 LTS'
 Select launch
@@ -33,7 +35,7 @@ Prompted to select a Key Pair.  Choose the one you just created (myAWSEC2)
 
 You will be prompted to choose an instance type, allowing you to pick the specificatons you would like for the instance.  The UK Calculator uses a c1.medium instance (this costs $0.13 per hour).
 
-4. Connect to your instance using SSH
+7. Connect to your instance using SSH
 
 Once the instance has initiated, it should be showing as 'running' in the instances view.
 
@@ -52,7 +54,9 @@ ssh -i /etc/ssl/certs/myAWSEC2.pem ubuntu@ec2-54-74-14-220.eu-west-1.compute.ama
 
 If successful the terminal prompt should change to something like ubuntu@ip-10-32-37-22:~
 
-From this terminal it is now possible download and run the Ubuntu set-up script to set up your Calculator, using the commands below:
+8. Set-up the Calculator on your instance
+
+from this terminal it is now possible download and run the Ubuntu set-up script to set up your Calculator, using the commands below:
 
     wget https://raw.githubusercontent.com/decc/twenty-fifty/master/util/setup-ubuntu-12.04.sh 
     sh setup-ubuntu-12.04.sh
@@ -65,7 +69,7 @@ As we are setting up the public version, enter 'Y'.
 
 If the message "The code should now be available on this computer" appears, the script has worked successfully.
 
-7. Editing Security Groups
+9. Editing Security Groups
 
 It may be necessary to edit the 'security groups' of your instance
  - Click on the security groups item in the EC2 Console left-hand menu.
@@ -77,7 +81,8 @@ It may be necessary to edit the 'security groups' of your instance
 
 
 
-8.  Open your Calculator (for a snappier URL, you will have to purchase a domain and map the IP to your new URL)
+10.  Open your Calculator in your browser, using the 'public DNS' of your instance as a URL (e.g: ec2-54-74-14-220.eu-west-1.compute.amazonaws.com)
+(for a snappier URL, you will have to purchase a domain and map the IP to your new URL)
 
 
 
@@ -95,7 +100,7 @@ root /home/ubuntu/twenty-fifty/public;  (added 'twenty-fifty')
 
 
 
-
+#Notes for Greg
 c1.medium ($0.13 per hour) ($1138.8 per year)
 Amazon Machine Images (AMIs)
 /etc/ssl/certs/gregEC2.pem 
