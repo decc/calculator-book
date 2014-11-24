@@ -31,6 +31,7 @@ going-further.md
 Schoolworkshop.md
 quality-assurance-checklists.md
 faq.md
+deploying-the-webtool-on-AWS-EC2.md
 
 # This isn't written yet
 todo.md
