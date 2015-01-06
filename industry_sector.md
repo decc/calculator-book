@@ -59,10 +59,66 @@ The energy demand multiplier is calculalated for each of the four subsectors by 
 3. Energy split by vector
 The energy split by vector (here, the vectors are broadly analgous the fuel types) is calculated for each of the four subsectors. [NEED TO ADD DETAIL HERE - is this subsector specific?]
 
-4. Process emissions intensity
+4. Growth in process emissions intensity
 The process emissions intensity multiplier (to be applied to the baseline emissiion in 2007) is calculated here for each of the four sebsectors using the 'chosen' annual multiplier.  (Again the annual multiplier is raised by the number of years (usually five), to account for the model's five year periodicity.
 
-5. Process emissions growth
-[how is this different to the thing just above?]
+5.  CSS emissions capture
+The percent of emitted CO2 (both combustion and process emissions) that is captured by CCS.  This is used to adjust the sectors emissions by the amount that is captured by CCS.  The perentage reduction is not applied to the 'other' industry subsector.
+
+
+##Fixed assumptions
+A number of fixed assumptions used in the energy and emissions calculations for the sector are stated here, including:
+
+1. Baseline energy consumption
+The 2007 baseline energy demand split by vector (fuel type) and industry subsector.
+
+2. Baseline GHG emissions
+The 2007 baseline GHG emissions split by GHG type (CO2, CH4, N2O and F) and industry subsector.
+
+3. Baseline AQ process emissions (2010)
+The 2010 baseline air quality emissions split by type (PM10, NOX, SO2 and NMVOC) and industry subsector.he 
+
+
+##Derived assumptions
+
+The trajectory assumptions and fixed assumptions given above are combined to provide a set of derived assumptions.  The act as useful intermediate results that are useful for calculating the main energy and emissions results.  These include:
+
+1. Output index
+The selected output growth percentage is used to calcualate an output index for each of the four subsectors.
+
+2. Energy demand multiplier
+The basline energy demand figures are compbined with the growth in enegy demand multiplier to produce a to produce a demand multiplier for each of the modelling periods out to 2050.
+
+3. Energy split by vector
+The percentage energy demand split by vector (fuel type) for each of the modelling period is constructed from the based on the users energy intensity level choice.
+
+4. a) Process emissions intensity
+A process emissions intensity multiplier is generated for each modelling period from the annual percentage change level chosen by the user
+
+b) Process emissions growth
+The process emissons intensity calculated above is combined with the output index to generate a multiplier for process emissions growth.
+
+5. Incremental cost of abatement
+The baseline capex and opex costs are multiplied by the high and low percentage increases due to the users slected energy efficiency measure.
+
+
+##Methodology
+
+The main energy and emissions calculations for the sector are completed here.
+
+1. Energy demand by vector
+The output index is multiplied by the demand multiplier to calculate the total energy use for all industry and each of the four subsectors.
+
+This total energy demand figures is then multiplied by the energy split by vector in the derived assumptions to calculate the demand by vector (fuel type).  This is done at a total industry level and by the four subsectors.
+
+2. Compute process emissons
+
+The process emissions growth multiplier from the derived assumptions is multiplied by the 2007 baseline stated in the fixed assumptions.  This is done separately for all process emissions, split by subsector.
+
+
+
+
+
+
 
 
