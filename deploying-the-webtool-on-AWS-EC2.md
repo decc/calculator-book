@@ -58,7 +58,8 @@ tp://www.openssh.org.
     from this terminal it is now possible download and run the Ubuntu set-up script to set up your Calculator, using the commands below:
 
     wget https://raw.githubusercontent.com/decc/twenty-fifty/master/util/setup-ubuntu-12.04.sh 
-    sh setup-ubuntu-12.04.sh
+
+    bash setup-ubuntu-12.04.sh
 
     During the set-up you will be prompted to enter the URL of your Calculators Git repository.  This is available from your GitHub reposity page, labelled 'HTTPS clone URL'.
 
@@ -68,12 +69,14 @@ tp://www.openssh.org.
 
     If the message "The code should now be available on this computer" appears, the script has worked successfully.
 
+    Next run the 'bundle' command from the top twenty-fifty directory, which installs all of the required dependencies.  When the bundle is complete navigate to the model directory (cd model/) and re-compile the C code (ruby compile_c_version_of_excel.rb).  When complete, restart the nginx server (sudo service nginx restart).
+
 9. Editing Security Groups
 
 It may be necessary to edit the 'security groups' of your instance before the public can gain access to your Calculator
 
  - Click on the security groups item in the EC2 Console left-hand menu.
-
+<F7>
  - Select your instance
 
  - click on the edit button
