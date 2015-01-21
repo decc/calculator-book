@@ -68,15 +68,32 @@ tp://www.openssh.org.
     As we are setting up the public version, enter 'Y'.
 
     If the message "The code should now be available on this computer" appears, the script has worked successfully.
+    
+9.  Recompile the C model
 
-    Next run the 'bundle' command from the top twenty-fifty directory, which installs all of the required dependencies.  When the bundle is complete navigate to the model directory (cd model/) and re-compile the C code (ruby compile_c_version_of_excel.rb).  When complete, restart the nginx server (sudo service nginx restart).
+Next run the 'bundle' command from the top twenty-fifty directory, which installs all of the required dependencies.  When the bundle is complete navigate to the model directory (cd model/) and re-compile the C code (ruby compile_c_version_of_excel.rb).
 
-9. Editing Security Groups
+10. Edit the Nginx configuration files
 
-It may be necessary to edit the 'security groups' of your instance before the public can gain access to your Calculator
+You may need to edit line 4 of the following files:
+
+/etc/nginx/sites-available/2050.conf
+/etc/nginx/sites-enabled/2050.conf
+
+
+so that they look like this:
+
+ root /home/ubuntu/**twenty-fifty**/public;
+
+
+Now restart the nginx server (sudo service nginx restart).
+
+11. Editing Security Groups
+
+Edit the 'security groups' of your instance before the public can gain access to your Calculator
 
  - Click on the security groups item in the EC2 Console left-hand menu.
-<F7>
+
  - Select your instance
 
  - click on the edit button
@@ -87,7 +104,7 @@ It may be necessary to edit the 'security groups' of your instance before the pu
 
 
 
-10.  Open the Calculator in your browser, using the 'public DNS' of your instance as a URL (e.g: ec2-54-74-14-220.eu-west-1.compute.amazonaws.com)
+12.  Open the Calculator in your browser, using the 'public DNS' of your instance as a URL (e.g: ec2-54-74-14-220.eu-west-1.compute.amazonaws.com)
     For a snappier URL, you will have to purchase a domain and map the IP to your new URL.
 
 
