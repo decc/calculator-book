@@ -1,6 +1,6 @@
 # The following files are assembled together to make the book
 # in the order they are given here. 
-
+# explanation
 front.md
 introduction.md
 
