@@ -21,16 +21,16 @@ All of the development of the webtool was done on the unix platform, i.e. a Maci
 
 Some previous experience of programming is beneficial, as although much of the process is automated, some editing of the underlying code will probably be required.  The backend of the model is written predominantly in the ruby programming language, while the front end is largely JavaScript based.  Familiarity with these two languages would be particularly beneficial.  The extent to which the Ruby code needs to be adapted depends on how far the new Excel model deviates in structure from the UK model.  Similarly, more adaptation of the JavaScript is required if it is intended to diverge from the UK webtool front end.
 
-The webtool source code freely available on GitHub (a web-based hosting service for software development projects that uses the Git revision 
-control system).  Some knowledge of this platform would be useful, particularly the unix terminal commands that can used to interact with it.
-The fasted way to get started with the webtool process when using Ubuntu is to run a pre-prepared set-up script that automatically performs a number of initial steps.  This script is available on the webtool GitHub repository, within the ‘util’ folder: https://github.com/decc/twenty-fifty/blob/master/util/setup-2050-server-script.sh
+The webtool source code freely available on GitHub (a web-based hosting service for software development projects that uses the Git revision control system), at the following address: https://github.com/decc/twenty-fifty.  Some knowledge of this platform would be useful, particularly the unix terminal commands that can used to interact with it.  Before making any edit to adapt the UK code, it is necessary to set up a GitHub account and make a 'fork' of the UK twenty-fifty code repository, by clicking the 'fork' button in the top right hand corner of the UK twenty-fifty page.  This will create a copy of the UK code within your user area of the GitHub site, that will act as the starting point for your version of the webtool.
+
+The fastest way to get started with the webtool process when using Ubuntu is to run a pre-prepared set-up script that automatically performs a number of initial steps.  This script is available on the webtool GitHub repository, within the ‘util’ folder: https://github.com/decc/twenty-fifty/blob/master/util/setup-2050-server-script.sh
 When run, the script performs the following actions:
 
 * downloads and installs all required dependencies
 
 * downloads and installs ruby (version 2.1)
 
-* downloads all the source code from GitHub
+* downloads all the source code from GitHub (You will be prompted to enter the address of the repository to clone.  Use the address created when you 'forked' the twenty-fifty repository.  This is labelled 'HTTPS clone URL' on the front page of your repository.)
 
 * compiles the c version of the UK model
 
@@ -38,7 +38,7 @@ When run, the script performs the following actions:
 
 * installs the interface between ruby and the server
 
-If run successfully, the script should create a working local server version of the UK webtool.  To start the server, navigate to the twenty-fifty folder created by script and enter the terminal command ‘rackup’.  The terminal will then return the port number (e.g. 9292) required to interact with the server in a browser.  The port number should be appended to the IP address of your local machine, which should be 0.0.0.0, to form a URL as follows: 0.0.0.0:9292.  When entered into your browser, this URL should open a functioning version of the UK Calculator running locally on your computer (as opposed to the UK Calculator remote webserver).  If this opens and runs successfully all of the required components are in place and ready to be adapted for a new version for the county in question.
+If run successfully, the script should create a working local server version of the webtool.  To start the server, navigate to the twenty-fifty folder created by script and enter the terminal command ‘rackup’.  The terminal will then return the port number (e.g. 9292) required to interact with the server in a browser.  The port number should be appended to the IP address of your local machine, which should be 0.0.0.0, to form a URL as follows: 0.0.0.0:9292.  When entered into your browser, this URL should open a functioning version of the UK Calculator running locally on your computer (as opposed to the UK Calculator remote webserver).  If this opens and runs successfully all of the required components are in place and ready to be adapted for a new version for the county in question.
 
 Separate instructions for getting set-up on OS X are available here: https://github.com/decc/twenty-fifty/blob/master/README.md
 
