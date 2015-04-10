@@ -40,10 +40,6 @@ The emphasis should be on launching the calculator as early as possible. One of 
 
 When drawing up a project plan, it is important to take into account other events that may impact the timeline. Perhaps there is an existing conference that would be perfect to launch the calculator, or perhaps there is a busy period coming up that is best avoided.  
 
-## Case study – Vietnam or Colombia
-
-Include an example of their project timeline. 
-
 ## Resources
 
 - Introductory slide pack for use in meetings
