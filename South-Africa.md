@@ -1,5 +1,6 @@
 #Case study: South Africa	
-## by Kent Buchanan, Control Environmental Officer, Department of Environmental Affairs, South Africa
+by Kent Buchanan, Control Environmental Officer, Department of Environmental Affairs, South Africa
+
 South Africa is one of the few countries within the 2050 Calculator community to boast the completion of three outputs: the [2050 Pathways Calculator](http://2050.lateral.co.za), the 2050 Excel workbook and the MY2050 Calculator. These are available online for anyone to access. The 2050 Pathways Calculator and the complementing 2050 Excel workbook, released in March 2014, are aimed for those with a more technical background while the MY2050 Calculator is aimed at people without a technical background including students. 
 
 The journey began in 2012 when representatives from the South African Department of Environmental Affairs (DEA) climate change mitigation team (Ms Deborah Ramalope, Chief Director: Climate Change Mitigation and Ms Olga Chauke, Director: Energy Mitigation) were invited to participate in the International 2050 Pathways Conference in China. The South African government found value in the  calculator  as it provides a user-friendly approach to analysing energy systems at a national level.  Because DEA has been entrusted with the national responsibility of sensitising citizens of South Africa around climate change issues, the 2050 pathways Calculator provided an opportunity to do exactly that: it enables users to explore the options for reducing emissions and  understanding the impact of their choices associated thereof. 
@@ -31,7 +32,7 @@ The 2050 Pathways Calculator as well as the MY2050 Calculator are valuable tools
 *	Our calculator team does not have the resources to efficiently share the calculator at the individual level. We therefore strive to target specific nodes that can further share the calculator with their constituency. For example, we plan to train teachers in charge of relevant subjects (e.g. geography, life sciences etc.) at the provincial level who can then dessiminate the calculator to the teachers at the local level. 
 *	The 2050 Calculator is a complex energy model that contains a certain degree of data gaps and it relies on many assumptions. Framing the calculator accurately for the target audience when it is communicated is important to optimise engagements into being constructive. For example, it is important to be transparent with the limitations and remind the audience that this is a scenario building tool. 
 
-##Project Management team for South Africa 
+Project Management team for South Africa: 
 
 * Project Leader: Deborah Ramalope, Chief Director Climate Change Mitigation, contact email: <Dramalope@environment.gov.za> Tel: +27 12 399 9160
 * Project Manager: Olga Chauke, Director: Energy Mitigation, email: <Ochauke@enviroment.gov.za>, Tel +27 12 399 9161, supported by Kent Buchanan, Control Environmental Officer: Energy Mitigation, email: Kbuchanan@environment.gov.za  Tel: +27 12 399 8868
