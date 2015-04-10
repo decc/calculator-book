@@ -13,6 +13,8 @@ launching-your-calculator.md
 influencing-policy.md
 engagement-and-education.md
 keeping-the-calculator-alive.md
+Vietnam.md
+South-Africa.md
 
 # These are appendices (note that their numbering has to be changed manually)
 
