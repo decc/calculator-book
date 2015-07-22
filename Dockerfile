@@ -16,11 +16,11 @@ CMD ["/sbin/my_init"]
 
 # Install the files needed to do the conversion from markdown
 RUN apt-get update
-RUN apt-get install pandoc
-RUN apt-get install texlive
-RUN apt-get install xmlto
-RUN apt-get install graphviz
-RUN apt-get install make
+RUN apt-get install -y pandoc
+RUN apt-get install -y texlive
+RUN apt-get install -y xmlto
+RUN apt-get install -y graphviz
+RUN apt-get install -y make
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
