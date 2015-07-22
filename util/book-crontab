@@ -1,0 +1,2 @@
+# m h  dom mon dow   command
+*/1 * * * * /usr/bin/ruby  /home/app/2050/public/make-outputs-if-needed.rb 2>&1 | /usr/bin/logger -t calculator-book

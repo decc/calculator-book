@@ -46,6 +46,12 @@ RUN bundle
 
 VOLUME /home/app/2050/public
 
+# Make sure this volume is writable
+RUN chmod -R a+rwx public
+
+# Add the update script to the crontab
+ADD util/book-crontab /etc/cron.d/book-crontab
+
 # Now need to build this image
 # e.g., docker build .
 #
