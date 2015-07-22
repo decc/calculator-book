@@ -1,5 +1,5 @@
 The 2050 Calculator Book
-===============
+========================
 
 This is a guide to implementing your own 2050 calculator. You can read it at http://book.2050.org.uk.
 
@@ -23,3 +23,17 @@ To add them through the command line:
 2. Refer to the image ![Description of the image](figures/filename-of-image.png)
 
 Note that it is important that the image url starts figures and not /figures
+
+Turning the markdown into somethings useful
+==========================================
+
+To turn the markdown into something useful, such as a pdf, website, epub and a word document you need the following installed:
+
+1. Ruby
+2. pandoc
+
+Then you need to run:
+
+    ruby public/make-outputs.rb
+
+If all goes well, you will see the results in the public folder.
