@@ -15,7 +15,6 @@ engagement-and-education.md
 keeping-the-calculator-alive.md
 Vietnam.md
 South-Africa.md
-Japan.md
 
 # These are appendices (note that their numbering has to be changed manually)
 
