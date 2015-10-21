@@ -224,3 +224,15 @@ With the new pathway selection in place the model is recalculated and the new re
 
 9. Navigate to http://0.0.0.0:9292 in your browser (or http://localhost:9292/)
 
+# Modifying the webtool
+
+Below are some tips on how to modify the web tool to suit different needs. They are not fully worked out instructions, you will need to get to know the code and figure things out for yourself.
+
+## Adjusting the scales on the charts
+
+For instance, the UK energy supply and energy demand charts are labeled as being in TWh/yr and go up to 4000. You might want them to be in PJ and go up to 10000. To make the change, open the javascript file for the particular view, in this case `src/javascripts/views/primary_energy.js`, look inside the `setup()` function, find the lines that define the `timeSeriesStackedAreaChart()` and change the text inside the `unit()` to, for instance, `unit("PJ")` and the number inside the `max_value()` to, say `max_value(10000)`.
+
+
+
+
+
