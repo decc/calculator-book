@@ -232,6 +232,22 @@ Below are some tips on how to modify the web tool to suit different needs. They 
 
 For instance, the UK energy supply and energy demand charts are labeled as being in TWh/yr and go up to 4000. You might want them to be in PJ and go up to 10000. To make the change, open the javascript file for the particular view, in this case `src/javascripts/views/primary_energy.js`, look inside the `setup()` function, find the lines that define the `timeSeriesStackedAreaChart()` and change the text inside the `unit()` to, for instance, `unit("PJ")` and the number inside the `max_value()` to, say `max_value(10000)`.
 
+## Adding a completely new set of charts
+
+For instance, you would like to add a new view containing detailed charts on energy security, or a new view containing per capita information. 
+
+In outline, you need to:
+
+1. Get all the calculations working in Excel
+2. Produce the charts you would like to see in Excel, linked to those calculations
+3. Arrange the data in the Excel into a neat table, and create a named reference to point to it (copy what has been done for one of the existing outputs).
+4. We reccomend that the named reference should start with the word `output.`, like `output.percapitaemissions`. If you have used a different sort of name, you will need to modify `model\translate_excel_into_c.rb` to add the name to `named_references_to_keep`.
+5. Run the translate_excel_into_c.rb code as you have done before, to get the change into the C version.
+Modify `model\data_from_model.rb` to change the `calculate_pathway()` function to include the new data. For example, to insert `'percapitaemissions' => excel.output_percapitaemissions`.
+6. Duplicate whatever existing view is closest to what you are looking for. e.g., copy `src/javascripts/views/primary_energy.js` and call it `src/javascripts/views/per_capita_energy.js`.
+7. Add a reference to the new file in `src/javascripts/application.js`, e.g., `//= require views/per_capita_energy`.
+8. Edit `src/index.html.erb` to include the new view in the drop down menu by adding a line to `<div id='views'>`, e.g., `<a class='view' data-view='per_capita_energy' href='#'>Per Capita Energy & Emissions</a>`
+9. Edit your new view javascript (e.g.,  `src/javascripts/views/per_capita_energy.js`) to use the new data. For example, in the `updateResults()` function you might change the reference to `pathway.final_energy_demand` to `pathway.percapitaemissions`. You would probably change the chart's `title`, `unit`, `min_value` and `max_value` in the `setup()` function higher in that file.
 
 
 
