@@ -232,6 +232,10 @@ Below are some tips on how to modify the web tool to suit different needs. They 
 
 For instance, the UK energy supply and energy demand charts are labeled as being in TWh/yr and go up to 4000. You might want them to be in PJ and go up to 10000. To make the change, open the javascript file for the particular view, in this case `src/javascripts/views/primary_energy.js`, look inside the `setup()` function, find the lines that define the `timeSeriesStackedAreaChart()` and change the text inside the `unit()` to, for instance, `unit("PJ")` and the number inside the `max_value()` to, say `max_value(10000)`.
 
+## Removing the 'shadows' on the electricity charts
+
+In the UK calculator, there are `shadows` on the electricity charts that allow you to visually compare the electricity demand and and supply with the total energy demand and supply. That might not be appropriate for other calculators. You can change it in `src/javascripts/views/electricity.js` by removing all the lines that call the `context()` function, for instance `this.demand_chart.context(total_final_energy)`.
+
 ## Adding a completely new set of charts
 
 For instance, you would like to add a new view containing detailed charts on energy security, or a new view containing per capita information. 
