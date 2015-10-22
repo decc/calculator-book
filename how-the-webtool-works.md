@@ -242,6 +242,22 @@ In some situations the energy security table total line as not always at the bot
 
 https://github.com/decc/twenty-fifty/blob/master/src/javascripts/views/energy_security.js#L148-L154
 
+## Getting the map view to work
+
+The first task in getting the map view to work is to find a map that is the right size. The UK one was 492 pixels by 725 pixels. The new map doesn't have to have an identical size, but shouldn't be too different. This needs to be put in the `/assets/images/` folder.
+
+The settings in `src/javascripts/views/map.js` then need to be changed to make the scales work:
+
+1. The `mapimage_url` needs to be given the name of your new map image.
+2. The `map_width` and the `map_height` need to be set to the size of your map image in pixels
+3. The `map_offset_x` and `map_offset_y` can be adjusted so the map is in the right sort of location on screen.
+4. VERY IMPORTANT: the `km` variable needs to be changed to the number of pixels per km on the map. This can be worked out fairly laboriously by counting the number of pixels on the map that a feature that you know the size of covers.
+5. If you have different codes for elements of the maps (e.g., you have a `IV.c` for concentrated solar power) then you need to give the new label a colour and a label in the `colours` and `labels` hashes respectively.
+6. The `pointSizes` hash specifies the size in pixels of the items that are drawn as circles rather than areas. You may want these to give a sense of the relative size of, say, a nuclear plant compared with a geothermal plant.
+
+Next, the items have to be placed on the map. That is done by changing the codes in the `land_box_names`, `sea_box_names`, `overseasiand_box_names` and `point_cluster_names`.
+
+These stacks of boxes may not end up in the right place on your map. These will require adjusting of the x and y values in the `updateResults` section. Getting it right is usually a matter of trial and error.
 
 ## Adding a completely new set of charts
 
