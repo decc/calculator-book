@@ -236,6 +236,13 @@ For instance, the UK energy supply and energy demand charts are labeled as being
 
 In the UK calculator, there are `shadows` on the electricity charts that allow you to visually compare the electricity demand and and supply with the total energy demand and supply. That might not be appropriate for other calculators. You can change it in `src/javascripts/views/electricity.js` by removing all the lines that call the `context()` function, for instance `this.demand_chart.context(total_final_energy)`.
 
+## The energy security table total line is not at the bottom
+
+In some situations the energy security table total line as not always at the bottom of the table. This has been fixed in the new version of the javascript:
+
+https://github.com/decc/twenty-fifty/blob/master/src/javascripts/views/energy_security.js#L148-L154
+
+
 ## Adding a completely new set of charts
 
 For instance, you would like to add a new view containing detailed charts on energy security, or a new view containing per capita information. 
