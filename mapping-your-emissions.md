@@ -174,10 +174,11 @@ When writing one-pagers, it is extremely important to be clear and concise – r
 
 - Briefly summarises the sector, and the situation today
 - Briefly sets out the meaning of levels 1-4, and the key implications of that level of deployment. This should include all the main figures involved (being consistent with units so that they can be compared), but not so much detail that the reader will become bored or confused.
+- Briefly discusses factors that the user should consider when making their choice, for example the effect on other levers, amount of land used or impact on air quality. Any likely social impacts, particularly those that differentially impact different sectors of the population, should be included.  
 - Illustrates the levels, ideally by comparing the deployment to historical levels or deployment in other countries to give an indication of how difficult or easy it would be to achieve. It can be helpful to include some information about how the levels were set.  
 - Illustrates the levels with a bar chart showing the amount of energy that sector produces or uses. This bar chart should have the same scale across every one page note, so one page notes can be compared with each other. Other graphs, images and diagrams can be included as well. 
 It’s a good idea to test them out on colleagues who are not working on the project early on, to make sure they are easy to understand.
-- Need examples of whole one-pagers, e.g. South Africa and India. Include a case study like Mexico? China hydro a good example. 
+- [Need examples of whole one-pagers e.g. South Africa and India. Include a case study like Mexico? China hydro a good example. ]
 
 ## Resources
 
