@@ -16,6 +16,8 @@ The calculator can be used to inform the strategic direction of a country or reg
 
 Because of the huge uncertainty around many of the options available in the calculator (for example, the deployment of carbon capture and storage technologies [CCS] at scale), it may be best not to set a strict pathway for the country or region at this point. 2050 is still quite a long way away. Consider releasing a few possible pathways instead.
 
+You should consider a range of factors when developing your plans, as there are trade offs that need to be balanced in lots of areas. Potential co-benefits (for example around energy security, forests, air quality and gender equality) should be taken into account when choosing a pathway and a plan to implement it. 
+
 ## Data management and data reporting
 
 Many countries, particularly developing ones, have limited emissions and energy reporting capability. A calculator can provide an easy way of recording the past and reporting progress.
