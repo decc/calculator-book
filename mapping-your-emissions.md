@@ -149,6 +149,7 @@ So who should you invite? You want to get a range of opinion, from the more cons
 - Representatives of professional or trade bodies
 - Academics 
 - Representatives of environmental NGOs or action groups
+- Representatives of women's groups, community groups, and other marginalised groups
 - Those working in government
 
 The focus should be on setting the levels, and perhaps some of the assumptions you have used. You should avoid discussing the underlying methodology of the model. This should already have been informed by stakeholders at an earlier stage, and opening up the debate again can be very time consuming. 
