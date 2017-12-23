@@ -15,7 +15,9 @@ If you want to add a section, create a new file with the text and then add it in
 
 # Adding images
 
-Images can't be added through the online interface (yet).
+Images can be added using the 'Upload Files' button at the top of this screen. 
+
+They can then be reffered to with code like `![Description of the image](figures/filename-of-image.png)`
 
 To add them through the command line:
 
