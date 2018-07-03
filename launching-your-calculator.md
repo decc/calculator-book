@@ -18,9 +18,8 @@ It can be extremely powerful to publish the key messages you have learned from t
 - How much could fossil fuels cost the country in 2050?
 - How much demand for electricity could there be in 2050?
 - Can you decarbonise the electricity grid?
-- How much can you achieve with energy efficiency along?
+- How much can you achieve with energy efficiency alone?
 - What are the limitations of bioenergy?
-- More?
 
 ## Holding a successful launch
 
@@ -30,9 +29,8 @@ If you want a public launch, you could hold a press conference or more informal 
 
 It is important to make it easy for people to give you feedback. For example, you could have a link on the web tool to your call for evidence page or an email address so that any visitors to the page can respond easily. 
 
-- More tips for launching your initial version
+[Add more tips for launching your initial version based on experience of teams. Add case study, potentially of Taiwan Calculator] 
 
-Case study – Taiwan. Information on launch event (with picture of their light up desk), and their communications strategy, including the FB competition
 
 ## Improving and re-launching the calculator
 
