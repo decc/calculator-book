@@ -28,7 +28,7 @@ Users should be able to submit their pathway to the modelling team. This is both
 
 The UK My2050 website was developed by an external agency (Delib).  All of the images and back-end code are owned by DECC and can be shared.  However, some countries have subsequently used a slightly different approach to producing their My2050s which may be more quickly and easily adopted by other countries.
 
-CAN WE INCLUDE ANY MORE ON THIS? Ed has a project spec for Colombia. Could be included.
+[Add more detail if available]
 
 ## Using My2050
 
@@ -41,11 +41,5 @@ Now your My2050 is ready, it is time to get people using it. There are many tact
 - Have a stand at an exhibition – My2050 is quick and fun to use, so it works well as a drop-in activity. Consider having a stand at science, technology or education exhibitions so that people passing can have a go at using the tool. 
 - Encourage its use in schools – My2050 is a great way to explore issues around energy and climate change for children of secondary school age, and it is relevant to subjects like geography, science and maths, as well as the social sciences. Create a website or resource aimed at teachers to show them how they can use the tool in class and explaining what the pupils can learn from their experience. 
 
-## Case study: the Taiwan My2050
+[Add case studies, e.g. South Africa, Taiwan, South East Europe. Add further resources, especially on the technical side, like the project specification for Colombia.]
 
-To add. Ask for technical spec. 
-
-## Resources
-
-- Is there software you could use or something? 
-- Colombia call for bids
