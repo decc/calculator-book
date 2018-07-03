@@ -26,10 +26,6 @@ In most calculators built so far, the modelling begins at a single base year, wh
 
 ## Box: The calculator and UN reporting	
 
-Under UNFCCC agreements, developed countries are required to submit economy-wide emission reduction targets, which include plans for how this will be split between different sectors and the assumptions that have been used to set the ambition of the targets. Developing countries have agreed to take nationally appropriate mitigation actions (NAMAs), and can voluntarily report these to the UN. They should show how the country will reduce its emissions relative to a “business as usual” scenario.
-The calculator can be a very useful tool for countries in drawing up their plans in accordance with these UN agreements. With the calculator you can model your current energy requirements and emissions profile, map your business as usual scenario, and monitor progress against your goals. You can then see all your options and identify those that make the most difference, and even examine the cost associated with them. Evidence from the calculator can make your plans more robust, accurate and credible.  
+Under the UNFCCC Paris Agreement, countries have set Nationally Determined Contribution (NDC) targets and will be required to report on their progress towards meeting them. The calculator could be used by countries in drawing up their plans for meeting their NDC. With the calculator you can model your current energy requirements and emissions profile, map your business as usual scenario, and monitor progress against your goals. You can then see all your options and identify those that make the most difference, and even examine the cost associated with them. Evidence from the calculator can make your plans more robust, accurate and credible. However, care must be taken if using the Calculator to monitor actual progress because of the specific UNFCCC guidelines for reporting emissions. It may be possible to align the Calculator to the categories used in inventories if required, but this could have design implications on the model.  
 
-DO WE NEED UNFCCC AGREEMENT THAT THE CALCULATOR IS USEFUL?
-
-## Box: Case study – China 
-Examples of how the Chinese calculator has influenced policy
+[Add case studies on how Calculators have influenced policy] 
