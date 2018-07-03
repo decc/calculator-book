@@ -4,7 +4,7 @@ The 2050 Calculator works by splitting up the energy and emissions system of a c
 
 The first step is to decide how to divide up the energy and emissions system, and this will depend on the particular economy you are looking at and what you want to find out. For example, residential heating is a major source of energy demand in the UK due to the mild climate. In a country like Thailand, air conditioning will be a more important area to focus on, so cooling would be a more appropriate choice.  If a sector is not relevant to you (for example wave power in a land-locked country), do not include it. 
 
-In the UK calculator, industry was modelled as one sector, but the calculator of the Belgian region of Wallonia split industry into a variety of sectors so it could be more accurately modelled. The Indian calculator splits electricity supply into low-carbon technologies and conventional technologies, which the team decided was a very useful distinction for reporting results.  Or the Chinese split of rural and urban transport. NEED TO ADD MORE INFO HERE  
+In the UK calculator, industry was modelled as one sector, but the calculator of the Belgian region of Wallonia split industry into a variety of sectors so it could be more accurately modelled. The Indian calculator splits electricity supply into low-carbon technologies and conventional technologies, which the team decided was a very useful distinction for reporting results.  Or the Chinese split of rural and urban transport. [Add more examples here]
 
 In general you should aim to have:
 
@@ -17,7 +17,14 @@ As a rule of thumb, 40 sectors is about right. In approach, we reccomend startin
 
 For reference, here is a list of the sectors that most calculators so far have used:
 
-- GREG TO ADD
+- Buildings (often separated into domestic and commercial and including the efficiency of lighting and appliances)
+- Transport (often split into passenger and freight)
+- Industry (sometimes with separate levers for different major industries)
+- Electricity production
+- Bioenergy
+- Agriculture and land use
+- Waste and recycling
+
 
 ## Mutually exclusive, collectively exhaustive (MECE) 
 
@@ -37,11 +44,7 @@ Once you have divided the energy system into sectors, it is time to look at each
 
 Basically, driver trees are another way of displaying the data and calculations you will need in the model. If you get them right, building your model will be a lot easier. 
 
-For example, below is a driver tree for international aviation in the UK:
-
-[driver tree]
-- Another example? 
-- Case study Mexico or Colombia?
+[Add examples of driver trees and case studies, perhaps Mexico or Colombia]
 
 ## Choosing your levers 
 
@@ -179,9 +182,8 @@ When writing one-pagers, it is extremely important to be clear and concise – r
 - Illustrates the levels, ideally by comparing the deployment to historical levels or deployment in other countries to give an indication of how difficult or easy it would be to achieve. It can be helpful to include some information about how the levels were set.  
 - Illustrates the levels with a bar chart showing the amount of energy that sector produces or uses. This bar chart should have the same scale across every one page note, so one page notes can be compared with each other. Other graphs, images and diagrams can be included as well. 
 It’s a good idea to test them out on colleagues who are not working on the project early on, to make sure they are easy to understand.
-- [Need examples of whole one-pagers e.g. South Africa and India. Include a case study like Mexico? China hydro a good example. ]
+- [Add examples of whole one-pagers e.g. South Africa and India, and perhaps add a case study.]
 
 ## Resources
 
-- One-pager template
-- Template presentation for workshops
+[Create a one-pager template and a template presentation for workshops]
